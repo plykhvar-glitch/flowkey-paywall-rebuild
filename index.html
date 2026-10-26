@@ -386,8 +386,8 @@ img{display:block}
 .phone-in.light .fk-pc{box-shadow:0 2px 10px rgba(22,24,31,.1)}
 .phone-in.light .fk-pc.sel{box-shadow:0 6px 24px rgba(239,125,0,.28)}
 /* proposed additions, in their parts */
-.fk-media{margin:0 16px;height:114px;border-radius:10px;overflow:hidden;position:relative;background:#000}
-.fk-media img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.fk-media{margin:0 16px;height:150px;border-radius:10px;overflow:hidden;position:relative;background:#000}
+.fk-media img{width:100%;height:100%;object-fit:cover;object-position:center}
 .fk-k{display:block;width:max-content;max-width:calc(100% - 40px);margin:-13px auto 0;position:relative;font:700 12px/1 'Inter',sans-serif;color:#111;background:#fff;border-radius:5px;padding:6px 9px;box-shadow:0 2px 8px rgba(0,0,0,.18)}
 .fk-k s{text-decoration-thickness:2px}
 .fk-k:empty{display:none}
@@ -930,7 +930,7 @@ fitPhones();
 renderTrio();
 if(/[?&]open=(proto|pw)/.test(location.search)) showView('pw');
 /* GitHub Pages lets browsers keep this page for 10 minutes; if a newer build is live, reload onto it */
-var BUILD='b4';
+var BUILD='b5';
 fetch(location.pathname+'?cb='+Date.now(),{cache:'no-store'}).then(function(r){ return r.text(); }).then(function(h){
   var m=h.match(/var BUILD='([^']+)'/); if(m && m[1]!==BUILD){ var q=new URLSearchParams(location.search); q.set('v',m[1]); location.replace(location.pathname+'?'+q.toString()); }
 }).catch(function(){});
