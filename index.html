@@ -36,122 +36,168 @@ img{display:block}
 @media(max-width:560px){.nav-in{height:56px;padding:0 12px}.nav-tag{display:none}.nav-in .lg{height:24px}.nav-links button{padding:0 12px;height:34px;font-size:13.5px}}
 .view{display:none}.view.on{display:block}
 
-/* ============ overview ============ */
-.hero{position:relative;overflow:hidden;background:#000 url(img/hero.jpg) center 62%/cover no-repeat;color:#fff;text-align:center;padding:96px 0 86px}
-.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,.5) 45%,rgba(0,0,0,.86) 100%)}
-.hero>*{position:relative}
-.eyebrow{font:600 11.5px/1 'Inter',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.7)}
-.hero h1{font:700 60px/1.06 'Inter',sans-serif;letter-spacing:-2px;margin-top:18px}
-.hero h1 em{font-style:normal;color:var(--or)}
-.hero .lede{font-size:19px;line-height:1.5;color:rgba(255,255,255,.88);max-width:690px;margin:20px auto 0}
-@media(max-width:700px){.hero{padding:70px 0 54px}.hero h1{font-size:38px;letter-spacing:-1.2px}.hero .lede{font-size:16.5px}}
-.stats{display:flex;justify-content:center;gap:12px;margin-top:44px;flex-wrap:wrap}
-.stat{width:176px;padding:18px 10px 16px;border-radius:14px;background:rgba(30,34,51,.78);border:1px solid rgba(255,255,255,.1);backdrop-filter:blur(8px)}
-.stat b{display:block;font:700 46px/1 'Inter',sans-serif;letter-spacing:-1.5px;color:#fff}
-.stat b.o{color:var(--or)}
-.stat span{display:block;font-size:13.5px;color:rgba(255,255,255,.72);margin-top:6px;line-height:1.3}
-@media(max-width:560px){.stat{width:calc(33.3% - 8px);padding:14px 6px}.stat b{font-size:32px}.stat span{font-size:11.5px}}
-.ctas{display:flex;justify-content:center;gap:12px;margin-top:40px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:54px;padding:0 28px;border-radius:8px;font:700 16.5px/1 'Inter',sans-serif;transition:transform .15s,filter .15s}
-.btn:hover{transform:translateY(-1px);filter:brightness(1.07)}
-.btn.or{background:var(--or);color:#fff;box-shadow:0 10px 26px rgba(239,125,0,.32)}
-.btn.gh{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.32)}
-.btn.dk{background:var(--black);color:#fff}
-.btn svg{width:13px;height:13px}
-@media(max-width:560px){.btn{width:100%}}
-.fb{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:34px}
-@media(max-width:700px){.fb{grid-template-columns:1fr}}
-.fb-k{grid-column:1/-1;font:600 11px/1 'Inter',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3);text-align:center;margin-bottom:2px}
-.chk{display:flex;gap:14px;align-items:flex-start;background:#fff;border-radius:14px;padding:18px 20px;box-shadow:0 6px 20px rgba(22,24,31,.05)}
-.ck{width:24px;height:24px;flex:none;border-radius:50%;background:var(--or);display:grid;place-items:center;margin-top:1px}
-.ck svg{width:13px;height:13px;color:#fff}
-.ck.warn{background:#fff;border:1.8px solid #D9483B}
-.chk b{display:block;font:600 16px/1.35 'Inter',sans-serif}
-.chk span.s{display:block;font-size:14px;line-height:1.5;color:var(--ink2);margin-top:2px}
+/* ============ overview — flowkey's own app, opened up ============ */
+/* 1 · their welcome screen: piano photo under a navy veil, script logo, "Start Now", "Already have an account? Log in", pager dots */
+.ov-wel{position:relative;overflow:hidden;background:#0D1028 url(img/hero.jpg) center bottom/cover no-repeat;color:#fff;text-align:center;padding:84px 0 40px;min-height:640px}
+.ov-wel::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,16,40,.86) 0%,rgba(13,16,40,.66) 50%,rgba(13,16,40,.88) 100%);backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px)}
+.ov-wel>*{position:relative}
+.ov-wel .mark{height:74px;width:auto;margin:0 auto}
+.eyebrow{font:600 11.5px/1 'Inter',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.62);margin-top:26px}
+.ov-wel h1{font:700 54px/1.08 'Inter',sans-serif;letter-spacing:-1.6px;margin:16px auto 0;max-width:860px}
+.ov-wel .lede{font-size:18px;line-height:1.55;color:rgba(255,255,255,.84);max-width:680px;margin:18px auto 0}
+.ov-start{display:block;width:340px;max-width:100%;height:52px;margin:34px auto 0;border-radius:4px;background:var(--or);color:#fff;font:600 18px/1 'Inter',sans-serif;box-shadow:0 10px 30px rgba(239,125,0,.35);transition:filter .15s}
+.ov-start:hover{filter:brightness(1.08)}
+.ov-acc{font-size:14px;color:rgba(255,255,255,.82);margin-top:18px}
+.ov-acc button{display:inline-flex;align-items:center;gap:6px;margin-top:6px;font:500 14px/1 'Inter',sans-serif;color:#fff;text-decoration:underline;text-underline-offset:3px}
+.ov-acc button svg{width:10px;height:10px}
+.ov-dots{display:flex;justify-content:center;gap:9px;margin-top:56px}
+.ov-dots i{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.35)}
+.ov-dots i.a{background:#fff}
+@media(max-width:700px){.ov-wel{padding:56px 0 30px;min-height:0}.ov-wel .mark{height:54px}.ov-wel h1{font-size:34px;letter-spacing:-1px}.ov-wel .lede{font-size:16px}.ov-dots{margin-top:36px}}
+
+/* 2 · their App Store tiles: orange field, brown tiles, white numbers */
+.ov-tiles{background:#F3A550;padding:44px 0 46px}
+.ov-tiles .k{font:700 12px/1 'Inter',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#7A3F00;text-align:center}
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+.tgrid.two{grid-template-columns:repeat(2,1fr);margin-top:16px}
+.tile{background:#A35500;border-radius:14px;color:#fff;text-align:center;padding:22px 16px 20px;min-height:150px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.tile svg{width:30px;height:30px;color:#F7A04A}
+.tile b{display:block;font:700 44px/1.05 'Inter',sans-serif;letter-spacing:-1.2px;margin-top:6px}
+.tile .st{color:#F7A04A;letter-spacing:4px;font-size:20px;line-height:1;margin-top:4px}
+.tile span{display:block;font-size:15px;line-height:1.35;color:rgba(255,255,255,.92);margin-top:6px}
+.tgrid.two .tile{min-height:0;padding:20px 18px}
+.tgrid.two .tile b{font-size:26px;letter-spacing:-.5px;margin-top:0}
+@media(max-width:700px){.tgrid{gap:8px}.tile{min-height:112px;padding:14px 6px;border-radius:10px}.tile b{font-size:32px}.tile span{font-size:12px}.tile svg{width:22px;height:22px}.tgrid.two{grid-template-columns:1fr}}
+
 .sec{padding:80px 0}
 .sec-k{font:600 12px/1 'Inter',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--or2);margin-bottom:14px}
 .sec h2{font:700 40px/1.12 'Inter',sans-serif;letter-spacing:-1.3px;margin:0 0 16px;max-width:880px}
-.sec p.body{font-size:17.5px;line-height:1.66;color:var(--ink2);max-width:740px;margin:0 0 16px}
+.sec p.body{font-size:17px;line-height:1.66;color:var(--ink2);max-width:740px;margin:0 0 16px}
 .sec p.body b{color:var(--ink);font-weight:700}
 @media(max-width:820px){.sec h2{font-size:29px;letter-spacing:-.8px}.sec{padding:56px 0}}
-.notes{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}
-@media(max-width:760px){.notes{grid-template-columns:1fr}}
 
-/* your ads: one row per promise, their creatives as song-library covers */
-.ads{margin-top:26px;background:var(--black);border-radius:22px;padding:22px 22px 10px;color:#fff}
-.ads-h{display:flex;align-items:baseline;justify-content:space-between;gap:10px;padding:0 4px 8px}
-.ads-h b{font:700 20px/1.2 'Inter',sans-serif}
-.ads-h span{font-size:12.5px;color:rgba(255,255,255,.55)}
-.prom{display:grid;grid-template-columns:298px 1fr 250px;gap:18px;align-items:center;padding:16px 4px;border-top:1px solid rgba(255,255,255,.08)}
-.covers{display:flex;gap:6px}
-.cov{width:70px;flex:none}
-.cov img{width:70px;height:52px;object-fit:cover;object-position:top;border-radius:6px;background:#222}
-.cov small{display:block;font-size:10.5px;color:rgba(255,255,255,.55);margin-top:4px;line-height:1.2;white-space:nowrap}
-.cov small i{display:inline-block;width:5px;height:5px;border-radius:50%;background:#34C759;margin-right:4px;vertical-align:1px}
-.pr-t q{display:block;font:700 17px/1.3 'Inter',sans-serif;quotes:'“' '”'}
-.pr-t p{font-size:13.6px;line-height:1.5;color:rgba(255,255,255,.66);margin-top:4px}
-.pr-t p b{color:#fff;font-weight:600}
-.pr-n{font:600 12px/1 'Inter',sans-serif;color:var(--or);margin-top:8px;letter-spacing:.02em}
-.pr-go{display:block;width:100%;text-align:left;background:var(--f-slate);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:12px 14px;transition:border-color .15s}
-.pr-go:hover{border-color:var(--or)}
-.pr-go small{display:block;font:600 10px/1 'Inter',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.45)}
-.pr-go b{display:block;font:700 14.5px/1.3 'Inter',sans-serif;margin-top:6px}
-.pr-go span{display:inline-flex;align-items:center;gap:5px;font:600 12.5px/1 'Inter',sans-serif;color:var(--or);margin-top:8px}
-.prom.rest .pr-go{opacity:.85}
-@media(max-width:900px){.prom{grid-template-columns:1fr;gap:12px}.covers{overflow-x:auto;scrollbar-width:none}}
-.ads-note{font-size:12px;line-height:1.55;color:rgba(255,255,255,.45);padding:12px 4px 12px;border-top:1px solid rgba(255,255,255,.08)}
-.dos{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+/* 3 · what this is, as their "How Your Free Trial Works" sheet */
+.ov-what{display:grid;grid-template-columns:1fr 400px;gap:48px;align-items:center}
+@media(max-width:920px){.ov-what{grid-template-columns:1fr;gap:24px}}
+.ov-sheet{--s-bg:#141B2B;--s-ink:#fff;--s-ink2:rgba(235,238,245,.72);background:#141B2B;color:#fff;border-radius:16px;padding:12px 0 22px;box-shadow:0 30px 60px -28px rgba(13,16,40,.6);position:relative}
+.ov-sheet .gb{width:42px;height:4px;border-radius:2px;background:var(--or);margin:4px auto 0}
+.ov-sheet .x{position:absolute;right:14px;top:12px;width:26px;height:26px;border-radius:50%;background:rgba(127,135,155,.28);display:grid;place-items:center}
+.ov-sheet .x svg{width:11px;height:11px}
+.ov-sheet h3{font:700 23px/1.2 'Inter',sans-serif;text-align:center;margin-top:18px}
+.ov-sheet .fk-tl{margin:22px 26px 0}
+.ov-sheet .pl{font-size:14px;color:var(--s-ink2);text-align:center;margin:4px 26px 0}
+.ov-sheet .pl b{color:#fff}
+.ov-two{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:34px}
+@media(max-width:760px){.ov-two{grid-template-columns:1fr}}
+.ov-card{background:#fff;border-radius:14px;padding:20px 20px 18px;box-shadow:0 6px 22px rgba(22,24,31,.06)}
+.ov-card h4{font:700 17px/1.3 'Inter',sans-serif}
+.ov-card p{font-size:14.5px;line-height:1.55;color:var(--ink2);margin-top:6px}
+/* their "What music would you like to play?" list, every row picked */
+.mlist{list-style:none;margin-top:12px}
+.mlist li{display:flex;align-items:center;gap:12px;padding:8px 0;font:500 14.5px/1.3 'Inter',sans-serif;border-top:1px solid var(--hair)}
+.mlist li:first-child{border-top:0}
+.mlist .ci{width:30px;height:30px;flex:none;border-radius:50%;background:var(--or);display:grid;place-items:center;color:#fff}
+.mlist .ci svg{width:15px;height:15px}
+.warn-i{width:30px;height:30px;border-radius:50%;border:2px solid #D9483B;display:grid;place-items:center;color:#D9483B;margin-bottom:10px}
+.warn-i svg{width:15px;height:15px}
+
+/* 4 · your ads, as their Songs library: "Most Popular" rows, covers, difficulty dots, "Show all" */
+.lib{margin-top:26px;background:#0E0E12;border-radius:26px;padding:28px 0 18px;color:#fff;overflow:hidden}
+.lib-top{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;padding:0 28px}
+.lib-top h3{font:700 34px/1 'Inter',sans-serif;letter-spacing:-.6px}
+.lib-top span{font-size:12.5px;color:rgba(255,255,255,.5);text-align:right;line-height:1.4}
+.shelf{padding:26px 0 4px}
+.shelf-h{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:0 28px}
+.shelf-h b{font:700 21px/1.25 'Inter',sans-serif;letter-spacing:-.3px}
+.shelf-h button{font:500 15px/1 'Inter',sans-serif;color:var(--or);white-space:nowrap}
+.shelf-h small{display:block;font:500 13px/1.3 'Inter',sans-serif;color:rgba(255,255,255,.5);margin-top:4px;letter-spacing:0}
+.row{display:flex;gap:14px;overflow-x:auto;scrollbar-width:none;padding:14px 28px 6px}
+.row::-webkit-scrollbar{display:none}
+.cv{flex:none;width:160px}
+.cv img{width:160px;height:118px;object-fit:cover;object-position:top;border-radius:4px;background:#222}
+.cv .dt{display:flex;gap:4px;margin-top:9px}
+.cv .dt i{width:7px;height:7px;border-radius:50%}
+.cv b{display:block;font:500 15px/1.25 'Inter',sans-serif;margin-top:6px}
+.cv span{display:block;font-size:13.5px;line-height:1.3;color:rgba(255,255,255,.5);margin-top:2px}
+.pw-card{flex:none;width:300px;height:118px;padding-top:10px;border-radius:6px;background:#141B2B;border:1px solid rgba(239,125,0,.4);padding:14px 16px;display:flex;flex-direction:column;text-align:left;position:relative;overflow:hidden;transition:border-color .15s}
+.pw-card:hover{border-color:var(--or)}
+.pw-card::before{content:'';position:absolute;left:50%;top:7px;transform:translateX(-50%);width:30px;height:3px;border-radius:2px;background:var(--or)}
+.pw-card small{font:700 10px/1 'Inter',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--or);margin-top:6px}
+.pw-card b{font:700 17px/1.28 'Inter',sans-serif;margin-top:8px;color:#fff}
+.pw-card em{font-style:normal;font-size:13px;line-height:1.4;color:rgba(255,255,255,.6);margin-top:auto}
+.pw-wrap{flex:none;width:300px}
+.pw-wrap .pv{font-size:13.5px;line-height:1.4;color:rgba(255,255,255,.62);margin-top:9px}
+.pw-wrap .pv b{color:#fff;font-weight:600}
+.lib-note{font-size:12px;line-height:1.55;color:rgba(255,255,255,.42);padding:18px 28px 6px;border-top:1px solid rgba(255,255,255,.07);margin-top:18px}
+@media(max-width:700px){.lib{border-radius:18px;padding-top:20px}.lib-top,.shelf-h{padding:0 16px}.row{padding:12px 16px 6px}.lib-top h3{font-size:28px}.cv,.cv img{width:132px}.cv img{height:97px}.pw-card{height:auto;min-height:97px}.pw-wrap,.pw-card{width:250px}.lib-note{padding:16px 16px 4px}.lib-top span{display:none}}
+.dos{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px}
 @media(max-width:860px){.dos{grid-template-columns:1fr}}
-.do{background:#fff;border-radius:14px;padding:18px 20px;box-shadow:0 6px 20px rgba(22,24,31,.05)}
-.do .n{font:700 12px/1 'Inter',sans-serif;color:var(--or2);letter-spacing:.1em}
-.do h4{font:700 16.5px/1.3 'Inter',sans-serif;margin-top:8px}
+.do{background:#fff;border-radius:14px;padding:20px 20px 18px;box-shadow:0 6px 22px rgba(22,24,31,.06)}
+.do .n{width:30px;height:30px;border-radius:50%;background:var(--or);color:#fff;display:grid;place-items:center;font:700 13px/1 'Inter',sans-serif}
+.do h4{font:700 16.5px/1.3 'Inter',sans-serif;margin-top:12px}
 .do p{font-size:14px;line-height:1.55;color:var(--ink2);margin-top:6px}
 .do p q{quotes:'“' '”';color:var(--ink);font-weight:600}
 
-/* the five ideas, as their quiz card: "What are your piano goals?" */
-.quiz{margin-top:26px;background:var(--f-slate);border-radius:20px;padding:26px 24px 18px;color:#fff;position:relative;overflow:hidden}
-.quiz::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 80% at 100% 0%,rgba(239,125,0,.16),rgba(239,125,0,0) 60%)}
-.quiz>*{position:relative}
-.quiz h3{font:700 26px/1.2 'Inter',sans-serif;letter-spacing:-.5px}
-.quiz .qs{font-size:14px;color:rgba(255,255,255,.6);margin-top:4px}
-.idea{display:grid;grid-template-columns:30px 1fr auto;gap:16px;align-items:center;width:100%;text-align:left;padding:16px 4px;border-top:1px solid rgba(255,255,255,.08);color:#fff;transition:background .15s}
-.idea:first-of-type{margin-top:14px}
+/* 5 · the five ideas, as their quiz: piano room behind, slate card, orange checks, Continue, dots */
+.ov-quiz{position:relative;background:#1B1F2E url(img/h-easy.jpg) center/cover;padding:90px 0 60px}
+.ov-quiz::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,16,26,.55),rgba(14,16,26,.82));backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
+.ov-quiz>*{position:relative}
+.ov-quiz .sec-k{color:#F7A04A;text-align:center}
+.ov-quiz .login{position:absolute;right:32px;top:28px;font:500 15px/1 'Inter',sans-serif;color:#fff}
+.qcard{max-width:760px;margin:0 auto;background:rgba(30,34,51,.96);border-radius:14px;padding:30px 30px 26px;color:#fff;box-shadow:0 30px 60px -20px rgba(0,0,0,.5)}
+.qcard h2{font:700 30px/1.2 'Inter',sans-serif;letter-spacing:-.6px;color:#fff;margin:0}
+.qcard .qs{font-size:14.5px;color:rgba(255,255,255,.6);margin-top:6px}
+.idea{display:grid;grid-template-columns:34px 1fr auto;gap:16px;align-items:center;width:100%;text-align:left;padding:15px 0;color:#fff;border-radius:8px;transition:background .15s}
+.idea:first-of-type{margin-top:12px}
 .idea:hover{background:rgba(255,255,255,.04)}
-.idea .rc{width:28px;height:28px;border-radius:50%;background:var(--or);display:grid;place-items:center;font:700 13px/1 'Inter',sans-serif}
-.idea h4{font:700 17.5px/1.3 'Inter',sans-serif;letter-spacing:-.2px}
-.idea p{font-size:14.2px;line-height:1.52;color:rgba(255,255,255,.7);margin-top:4px}
+.idea .rc{width:30px;height:30px;border-radius:50%;background:var(--or);display:grid;place-items:center;color:#fff}
+.idea .rc svg{width:15px;height:15px}
+.idea h4{font:600 17px/1.3 'Inter',sans-serif;letter-spacing:-.2px}
+.idea h4 small{font:700 11px/1 'Inter',sans-serif;color:#F7A04A;letter-spacing:.08em;margin-right:6px}
+.idea p{font-size:14px;line-height:1.52;color:rgba(255,255,255,.68);margin-top:4px}
 .idea p b{color:#fff;font-weight:600}
 .idea .out{display:flex;flex-direction:column;align-items:flex-end;gap:4px;white-space:nowrap}
-.idea .out b{font:700 14.5px/1 'Inter',sans-serif;color:#fff;background:var(--or);border-radius:8px;padding:9px 12px}
+.idea .out b{font:700 14.5px/1 'Inter',sans-serif;color:#fff;background:rgba(239,125,0,.18);border:1px solid rgba(239,125,0,.55);border-radius:6px;padding:8px 11px}
 .idea .out span{font-size:11.5px;color:rgba(255,255,255,.5)}
-@media(max-width:700px){.quiz{padding:20px 14px 10px}.idea{grid-template-columns:28px 1fr;gap:12px}.idea .out{grid-column:2;flex-direction:row;align-items:center;gap:8px}.idea h4{font-size:16px}}
-.kept{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
-.kept span{font-size:13px;font-weight:500;background:#fff;border:1px solid var(--hair);border-radius:999px;padding:7px 12px;color:var(--ink2)}
-.kept span b{color:var(--ink);font-weight:600}
+.qcard .cont{display:block;width:100%;height:50px;border-radius:4px;background:var(--or);color:#fff;font:600 17px/1 'Inter',sans-serif;margin-top:18px}
+.ov-quiz .ov-dots{margin-top:26px}
+.ov-quiz .ov-dots i.a{background:#fff}
+@media(max-width:700px){.ov-quiz{padding:60px 0 40px}.qcard{padding:22px 16px 18px}.qcard h2{font-size:24px}.idea{grid-template-columns:30px 1fr;gap:12px}.idea .out{grid-column:2;flex-direction:row;align-items:center;gap:8px}.idea h4{font-size:15.5px}.ov-quiz .login{display:none}}
 
-/* outcome: their "Unlock All Access" plan cards */
-.out-wrap{margin-top:46px;background:var(--f-navy);border-radius:24px;padding:40px 36px 36px;text-align:center;color:#fff}
-.out-wrap .lab{font:600 11px/1 'Inter',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.5)}
-.out-wrap .gb{width:44px;height:4px;border-radius:2px;background:var(--or);margin:0 auto 16px}
-.out-wrap h3{font:700 30px/1.15 'Inter',sans-serif;letter-spacing:-.8px;margin-top:12px}
-.oc{display:flex;justify-content:center;align-items:flex-end;gap:16px;margin-top:28px}
-.ocard{width:200px;background:#fff;color:#2B2D35;border-radius:6px;text-align:center;overflow:hidden}
-.ocard .rb{background:var(--or);color:#fff;font:700 11px/1 'Inter',sans-serif;letter-spacing:.08em;padding:8px 0}
+/* 6 · the outcome, as their "Unlock All Access" sheet over the course home */
+.ov-out{margin:0 auto;max-width:760px;background:#05070B;border-radius:26px;overflow:hidden;box-shadow:0 30px 70px -30px rgba(13,16,40,.55)}
+.ov-out .home{position:relative;height:150px;padding:22px 24px 0}
+.ov-out .home b{position:relative;z-index:1;font:700 21px/1 'Inter',sans-serif;color:#fff}
+.ov-out .home .st{display:flex;gap:10px;margin-top:14px;opacity:.55}
+.ov-out .home .st img{width:240px;height:120px;object-fit:cover;border-radius:6px}
+.ov-out .home .st i{flex:1;height:120px;border-radius:6px;background:#1A1F2C}
+.ov-out .sh{position:relative;margin-top:-40px;background:#141B2B;border-radius:16px 16px 0 0;padding:14px 28px 34px;color:#fff;text-align:center}
+.ov-out .gb{width:42px;height:4px;border-radius:2px;background:var(--or);margin:0 auto}
+.ov-out h3{font:700 30px/1.15 'Inter',sans-serif;letter-spacing:-.6px;margin-top:22px}
+.ov-out .sub{font-size:14.5px;color:rgba(235,238,245,.66);margin-top:8px}
+.ov-seg{display:inline-flex;margin-top:20px;background:#232B3D;border-radius:8px;padding:3px}
+.ov-seg span{cursor:pointer;padding:8px 16px;border-radius:6px;font:600 13px/1 'Inter',sans-serif;color:rgba(235,238,245,.72)}
+.ov-seg span.a{background:#4A5266;color:#fff}
+.oc{display:flex;justify-content:center;align-items:flex-end;gap:18px;margin-top:24px}
+.ocard{width:200px;background:#fff;color:#2B2D35;border-radius:5px;text-align:center;overflow:hidden;border:3px solid transparent}
+.ocard .rb{visibility:hidden;background:var(--or);color:#fff;font:700 11px/1 'Inter',sans-serif;letter-spacing:.08em;padding:8px 0}
 .ocard .bd{padding:16px 10px 12px}
-.ocard .bd b{display:block;font:800 52px/1 'Inter',sans-serif;letter-spacing:-2px;color:var(--or)}
-.ocard .bd span{display:block;font:700 13px/1.2 'Inter',sans-serif;letter-spacing:.08em;margin-top:6px}
-.ocard .ft{border-top:1px solid #E5E5EA;padding:10px 8px;font-size:12px;color:#6B6E78}
-.ocard.sel{outline:3px solid var(--or)}
-.out-wrap p.sum{font-size:15.5px;line-height:1.62;color:rgba(255,255,255,.75);max-width:660px;margin:26px auto 0}
-@media(max-width:560px){.out-wrap{padding:30px 14px}.ocard{width:46%}.ocard .bd b{font-size:38px}.out-wrap h3{font-size:24px}}
-.endrow{display:flex;justify-content:center;align-items:center;gap:22px;margin-top:30px;flex-wrap:wrap}
+.ocard .bd b{display:block;font:800 52px/1 'Inter',sans-serif;letter-spacing:-2px;color:#2B2D35}
+.ocard .bd span{display:block;font:800 13px/1.2 'Inter',sans-serif;letter-spacing:.08em;margin-top:6px;color:#6B6E78}
+.ocard .ft{border-top:1px solid #E5E5EA;padding:10px 8px;font-size:12px;font-weight:600;color:#6B6E78}
+.ocard.sel .rb{visibility:visible}.ocard{cursor:pointer;transition:border-color .15s}.ocard.sel{border-color:var(--or);box-shadow:0 8px 30px rgba(239,125,0,.3)}
+.ov-out .pl{font-size:15px;line-height:1.5;color:rgba(235,238,245,.75);margin:24px auto 0;max-width:520px}
+.ov-out .pl b{color:#fff}
+.ov-out .ov-start{margin-top:18px;width:420px}
+.ov-out .sum{font-size:13px;line-height:1.6;color:rgba(235,238,245,.5);max-width:560px;margin:18px auto 0}
+@media(max-width:560px){.ov-out{border-radius:18px}.ov-out .sh{padding:14px 14px 26px}.ocard{width:47%}.ocard .bd b{font-size:36px}.ov-out h3{font-size:24px}.ov-out .home .st img{width:180px}}
+.endrow{display:flex;justify-content:center;margin-top:28px}
 .qr{display:flex;align-items:center;gap:16px;background:#fff;border:1px solid var(--hair);border-radius:14px;padding:12px 22px 12px 12px;color:var(--ink);text-align:left}
 .qr img{width:135px;height:135px;image-rendering:pixelated;border-radius:4px}
 .qr b{display:block;font:700 15px/1.3 'Inter',sans-serif}
 .qr span{display:block;font-size:13px;color:var(--ink3);line-height:1.45;max-width:170px;margin-top:3px}
-@media(max-width:1080px){.qr{display:none}}
+@media(max-width:1080px){.endrow .qr{display:none}}
 .foot{border-top:1px solid var(--hair);padding:30px 0 64px;font-size:12.5px;line-height:1.6;color:var(--ink3)}
-
 /* ============ paywall view ============ */
 .stage{display:grid;grid-template-columns:minmax(470px,1fr) minmax(420px,540px);align-items:start;min-height:calc(100vh - 60px)}
 @media(max-width:1060px){.stage{grid-template-columns:minmax(0,1fr)}.panelcol{position:static!important;max-height:none!important;border-left:0!important;border-top:1px solid var(--hair)}}
@@ -376,98 +422,121 @@ img{display:block}
 
 <!-- ======================= OVERVIEW ======================= -->
 <div class="view on" id="view-over">
-<div class="hero"><div class="wrap">
+<div class="ov-wel"><div class="wrap">
+  <img class="mark" src="img/logo.svg" alt="flowkey">
   <div class="eyebrow">Paywall audit · October 2026 · Prepared by Adapty</div>
-  <h1>Every ad makes a promise.<br>Your paywall <em>should keep it.</em></h1>
-  <p class="lede">“One wrong note…”, “Check out this app!”, “Learning piano is not easy”: your ads promise different things to different people. Then all of them land on the same trial screen. Five changes, built from the creatives you already run and the answers your onboarding already collects.</p>
-  <div class="stats">
-    <div class="stat"><b class="o">6</b><span>ad promises</span></div>
-    <div class="stat"><b>1</b><span>paywall for all of them today</span></div>
-    <div class="stat"><b>5</b><span>ideas</span></div>
+  <h1>Every ad makes a promise.<br>Your paywall should keep it.</h1>
+  <p class="lede">“One wrong note…”, “Check out this app!”, “Learning piano is not easy”: each of your ads promises something different. Then everyone lands on the same trial screen. Here are five changes, built from the ads you already run and the answers your onboarding already collects.</p>
+  <button class="ov-start" data-view="pw">Open the paywall</button>
+  <div class="ov-acc">Rather watch it play?<br><button id="heroDemo"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l12-7.5z"/></svg>30-second walkthrough</button></div>
+  <div class="ov-dots"><i class="a"></i><i></i><i></i><i></i><i></i></div>
+</div></div>
+
+<div class="ov-tiles"><div class="wrap">
+  <div class="tgrid">
+    <div class="tile"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 5h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9l-4 3v-3H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"/></svg><b>6</b><span>promises in your ads</span></div>
+    <div class="tile"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><rect x="8" y="12" width="8" height="7" rx="1" fill="#A35500"/></svg><b>1</b><span>paywall behind all of them</span></div>
+    <div class="tile"><div class="st">★★★★★</div><b>5</b><span>ideas, ranked</span></div>
   </div>
-  <div class="ctas">
-    <button class="btn or" data-view="pw">Open the paywall</button>
-    <button class="btn gh" id="heroDemo"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l12-7.5z"/></svg>30-sec walkthrough</button>
+  <div class="tgrid two">
+    <div class="tile"><span style="margin-top:0">Built in Adapty Flow Builder</span><b>Millions of dollars</b><span>in subscription revenue pass through Flow Builder every month</span></div>
+    <div class="tile"><span style="margin-top:0">Built in Adapty Flow Builder</span><b>Nearly 500 apps</b><span>build their paywalls and onboarding in it, many of them past $100K MRR</span></div>
   </div>
 </div></div>
 
-<div class="wrap">
-  <div class="fb">
-    <div class="fb-k">Built in Adapty Flow Builder</div>
-    <div class="chk"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>Millions of dollars</b><span class="s">in subscription revenue pass through Flow Builder every month.</span></span></div>
-    <div class="chk"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>Nearly 500 apps</b><span class="s">build their paywalls and onboarding in it — plenty of them past $100K MRR.</span></span></div>
-  </div>
-</div>
-
 <div class="sec"><div class="wrap">
-  <div class="sec-k">What this is</div>
-  <h2>We watched your ads, went through your onboarding, and rebuilt the screen where the trial is decided.</h2>
-  <p class="body">Adapty powers subscriptions for <b>30,000+ apps</b>, so we see what moves conversion across the market, not inside one app. We went through your onboarding from “Play the music you love” to the plan picker: played before, piano goals, music taste, “Do you have a piano?” and “Do others at home want to learn piano too?”. Then we read your App Store page, flowkey.com, your help centre, and the ads you have been running over the last three months.</p>
-  <p class="body">Your ads are good at one thing most aren’t: <b>each one makes a specific promise</b> — the app catches your wrong note, no stickers on the keys, a song you love, a real start for people who think piano is hard. Your onboarding then asks five good questions. And then <b>everyone sees the same “How Your Free Trial Works”</b>, with the plans one more tap away and no sign of your 4.7 stars, your 15 million downloads or Yamaha.</p>
-  <div class="notes">
-    <div class="chk"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>We did not redesign your paywall</b><span class="s">The navy sheet with the orange grabber, the Today / Day 5 / Day 7 timeline, the Individual / Family switch, the white plan cards with the orange “7-DAY FREE TRIAL” ribbon and “Start 7-Day Free Trial” all stay. What changes is what the sheet says, and to whom.</span></span></div>
-    <div class="chk"><span class="ck warn"><svg viewBox="0 0 24 24" fill="none" stroke="#D9483B" stroke-width="2.6" stroke-linecap="round"><path d="M12 7v6M12 16.5v.01"/></svg></span><span><b>You may have tested some of this</b><span class="s">We are working from the outside, so we cannot see your experiment history. If you have already run one of these, tell us and we will go deeper on the rest.</span></span></div>
+  <div class="ov-what">
+    <div>
+      <div class="sec-k">What this is</div>
+      <h2>We watched your ads, took your quiz, and rebuilt the sheet where the trial gets decided.</h2>
+      <p class="body">Adapty powers subscriptions for <b>30,000+ apps</b>, so we see what moves conversion across the market. We went through your onboarding from “Play the music you love” to the plan picker, read your App Store page, flowkey.com and your help centre, and grouped the ads you ran from late July to late October.</p>
+      <p class="body">Every ad makes one clear promise. Your quiz then asks five good questions. After that, <b>everyone gets the same “How Your Free Trial Works”</b>. The plans are one more tap away, and your 4.7 stars, 15 million downloads and Yamaha partnership appear nowhere on either screen.</p>
+    </div>
+    <div class="ov-sheet">
+      <div class="gb"></div><span class="x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></span>
+      <h3>How This Audit Works</h3>
+      <ul class="fk-tl">
+        <li><span class="dt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-4 3V5z"/></svg></span><span><b>Your ads</b><span>Every creative from late July to late October, grouped by what it promises</span></span></li>
+        <li><span class="dt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l2 2 4-4"/><rect x="4" y="4" width="16" height="16" rx="8"/></svg></span><span><b>Your quiz</b><span>Played before, goals, music, piano, others at home: each answer used</span></span></li>
+        <li><span class="dt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3" width="12" height="18" rx="2.5"/><path d="M10 17h4"/></svg></span><span><b>Your paywall</b><span>The same sheet, plans and prices, now saying the right thing to each person</span></span></li>
+      </ul>
+      <p class="pl">5 ideas, then <b>up to +20% conversion to trial</b></p>
+    </div>
+  </div>
+  <div class="ov-two">
+    <div class="ov-card"><h4>We did not redesign your paywall</h4><p>Everything you see in the prototype is yours:</p>
+      <ul class="mlist">
+        <li><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>The navy sheet and the orange grabber</li>
+        <li><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Today / Day 5 / Day 7</li>
+        <li><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Individual Plan / Family Plan</li>
+        <li><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>White plan cards with the “7-DAY FREE TRIAL” ribbon</li>
+        <li><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>“Start 7-Day Free Trial” at $149.99 a year</li>
+      </ul></div>
+    <div class="ov-card"><div class="warn-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"><path d="M12 7v6M12 16.5v.01"/></svg></div><h4>You may have tested some of this</h4><p>We are working from the outside, so we cannot see your experiment history. If you have already run one of these, tell us and we will go deeper on the rest.</p>
+      <p style="margin-top:14px">Every price, rating and quote comes from your App Store page, flowkey.com or your help centre. Where something is not published, such as the price behind your 65% ad, we left the slot empty.</p></div>
   </div>
 </div></div>
 
 <div class="sec" style="padding-top:0"><div class="wrap">
   <div class="sec-k">Your ads</div>
   <h2>Six promises in your ads. One paywall behind all of them.</h2>
-  <p class="body">We grouped the creatives you ran from late July to late October by what they promise the person who taps. Each group gets the paywall that keeps that promise. Tap one to open it.</p>
-  <div class="ads" id="adsList"></div>
+  <p class="body">Your ads, laid out like your song library. Each row is one promise. The last tile shows the paywall that keeps it: tap it to open that version on the phone.</p>
+  <div class="lib" id="adsList"></div>
   <div class="dos">
-    <div class="do"><div class="n">01</div><h4>Send the ad along with the install</h4><p>The Meta campaign and ad set arrive with the install through your attribution. Adapty turns them into an audience, so the paywall is chosen before the first screen loads. Name ad sets by promise, not by date.</p></div>
-    <div class="do"><div class="n">02</div><h4>Give the 65% ad its own paywall</h4><p>The Spanish bus-stop videos say <q>Ahórrate un 65% en un año</q> and <q>Oferta limitada</q>. Those installs should land on that offer, not on the full-price trial. We left it out of the prototype: the store does not publish that price.</p></div>
-    <div class="do"><div class="n">03</div><h4>New ad, new paywall, same day</h4><p><q>Learning piano is not easy</q> went from English to Italian and French in six weeks. In Flow Builder the paywall that answers it is a headline and an image, translated alongside the ad.</p></div>
+    <div class="do"><div class="n">1</div><h4>Send the ad along with the install</h4><p>Your attribution already knows the Meta campaign and ad set behind each install. Adapty turns them into an audience, so the right paywall is picked before the first screen loads. Name ad sets by promise, not by date.</p></div>
+    <div class="do"><div class="n">2</div><h4>Give the 65% ad its own paywall</h4><p>The Spanish bus-stop videos say <q>Ahórrate un 65% en un año</q> and <q>Oferta limitada</q>. People who tap them should land on that offer, not on the full-price trial. It is not in the prototype because the store does not publish that price.</p></div>
+    <div class="do"><div class="n">3</div><h4>New ad, new paywall, same day</h4><p><q>Learning piano is not easy</q> went from English to Italian and French in six weeks. In Flow Builder, the paywall that answers it is one headline and one image, translated together with the ad.</p></div>
   </div>
 </div></div>
 
-<div class="sec" style="padding-top:0"><div class="wrap">
+<div class="ov-quiz"><span class="login">Log In</span><div class="wrap">
   <div class="sec-k">What we change on the paywall</div>
-  <h2>What are your paywall goals?</h2>
-  <p class="body">Five changes, ranked by what we would test first. Tap one to see it on the phone.</p>
-  <div class="quiz">
-    <h3>Five changes to the paywall</h3>
-    <div class="qs">Same sheet, same plans, same prices.</div>
-    <button class="idea" data-hl="1"><span class="rc">1</span><span>
-      <h4>The paywall opens on the ad they tapped</h4>
-      <p>Six ad promises, six versions of the sheet. Someone who tapped “One wrong note…” reads <b>“…and flowkey waits for the right one.”</b> above Wait Mode. Someone who tapped “Learning piano is not easy” reads that flowkey takes it one step at a time.</p></span>
+  <div class="qcard">
+    <h2>What are your paywall goals?</h2>
+    <div class="qs">Five changes, ranked by what we would test first. Tap one to see it on the phone.</div>
+    <button class="idea" data-hl="1"><span class="rc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>
+      <h4><small>01</small>The paywall opens on the ad they tapped</h4>
+      <p>Six promises, six versions of the sheet. After “One wrong note…”, it says <b>“…and flowkey waits for the right one.”</b> After “Learning piano is not easy”, it says flowkey takes it one step at a time.</p></span>
       <span class="out"><b>CR +15–20%</b><span>to trial</span></span></button>
-    <button class="idea" data-hl="2"><span class="rc">2</span><span>
-      <h4>Plans and timeline on one sheet, with their first course</h4>
-      <p>Today the timeline and the plans are two screens, with “View all plans” as a text link. Now the plans sit on the first sheet, and Today on the timeline names where they start: <b>“Start with Introduction to the Piano”</b>.</p></span>
+    <button class="idea" data-hl="2"><span class="rc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>
+      <h4><small>02</small>Plans and timeline on one sheet, with their first course</h4>
+      <p>Today the plans hide behind “View all plans”. Now they are on the first sheet, and Today on the timeline names their first course: <b>“Start with Introduction to the Piano”</b>.</p></span>
       <span class="out"><b>CR +10–15%</b><span>to trial</span></span></button>
-    <button class="idea" data-hl="4"><span class="rc">3</span><span>
-      <h4>Your proof where they decide</h4>
-      <p><b>4.7 stars from 66K ratings</b>, 15 Million downloads and Yamaha are on your App Store page, not on the sheet. Now they are, with a quote from your own site or store reviews that matches the ad.</p></span>
+    <button class="idea" data-hl="4"><span class="rc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>
+      <h4><small>03</small>Your proof where they decide</h4>
+      <p><b>4.7 stars from 66K ratings</b>, 15 Million downloads and Yamaha are on your App Store page but not on the paywall. Now they sit above the plans, with a quote that matches the ad.</p></span>
       <span class="out"><b>CR +10–15%</b><span>to trial</span></span></button>
-    <button class="idea" data-hl="3"><span class="rc">4</span><span>
-      <h4>“Others too” opens on the Family Plan</h4>
-      <p>You ask whether others at home want to learn piano too, then open on the individual plan. Now <b>“Others too” opens on Family</b>: $224.99 a year for up to five people, with the same 7-day trial.</p></span>
+    <button class="idea" data-hl="3"><span class="rc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>
+      <h4><small>04</small>“Others too” opens on the Family Plan</h4>
+      <p>You ask whether others at home want to learn too, then show the individual plan anyway. Now <b>“Others too” opens on Family</b>: $224.99 a year for up to five people, with the same 7 free days.</p></span>
       <span class="out"><b>ARPU +5–10%</b><span>per subscriber</span></span></button>
-    <button class="idea" data-hl="5"><span class="rc">5</span><span>
-      <h4>flowkey Classic, when they close the sheet</h4>
-      <p>The X drops them back on the free songs. Now it opens one comparison: <b>Classic at $99.99 a year</b>, every course and every classical song, with an upgrade to Premium any time.</p></span>
+    <button class="idea" data-hl="5"><span class="rc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>
+      <h4><small>05</small>flowkey Classic, when they close the sheet</h4>
+      <p>Today the X drops them back on the free songs. Now it opens one comparison: <b>Classic at $99.99 a year</b>, with every course and every classical song, and Premium one tap away.</p></span>
       <span class="out"><b>ARPU +10–15%</b><span>from people who close</span></span></button>
+    <button class="cont" data-view="pw">Continue to the paywall</button>
   </div>
-  <div class="kept">
-    <span><b>Kept:</b> the navy sheet and orange grabber</span><span>Today / Day 5 / Day 7</span><span>Individual / Family Plan</span><span>White plan cards, orange ribbon</span><span>“Start 7-Day Free Trial”</span><span>$149.99 a year, 7 days free</span>
-  </div>
+  <div class="ov-dots"><i></i><i class="a"></i><i></i><i></i><i></i></div>
+</div></div>
 
-  <div class="out-wrap">
-    <div class="gb"></div>
-    <div class="lab">Potential outcome · based on Adapty data</div>
-    <h3>Unlock all the traffic you already pay for</h3>
-    <div class="oc">
-      <div class="ocard"><div class="rb" style="visibility:hidden">·</div><div class="bd"><b>+15%</b><span>ARPU</span></div><div class="ft">up to · Family and Classic</div></div>
-      <div class="ocard sel"><div class="rb">TRIAL CONVERSION</div><div class="bd"><b>+20%</b><span>CR TO TRIAL</span></div><div class="ft">up to · with the five ideas</div></div>
-    </div>
-    <p class="sum">Together, the five make the paywall finish what your ads started: it repeats the promise they tapped, starts the trial on their own first course, shows your proof at the moment of the decision, offers Family to the households that told you so, and gives the people who close it a cheaper way in.</p>
-    <div class="endrow">
-      <button class="btn or" data-view="pw">Open the paywall</button>
-      <div class="qr"><img src="img/qr.svg" alt="QR code to the paywall"><div><b>Open it on your phone</b><span>Scan to try the paywall in your hand.</span></div></div>
+<div class="sec"><div class="wrap">
+  <div class="ov-out">
+    <div class="home"><b>Beginner Courses</b><div class="st"><img src="img/home.jpg" alt=""><i></i><i></i></div></div>
+    <div class="sh">
+      <div class="gb"></div>
+      <h3>Unlock More From Every Install</h3>
+      <div class="sub">Potential outcome · based on Adapty data</div>
+      <div class="ov-seg" id="ovSeg"><span class="a" data-o="cr">Trial conversion</span><span data-o="arpu">Revenue</span></div>
+      <div class="oc">
+        <div class="ocard" data-o="arpu"><div class="rb">FAMILY + CLASSIC</div><div class="bd"><b>+15%</b><span>ARPU</span></div><div class="ft">up to · Family and Classic</div></div>
+        <div class="ocard sel" data-o="cr"><div class="rb">ALL FIVE IDEAS</div><div class="bd"><b>+20%</b><span>CR TO TRIAL</span></div><div class="ft">up to · same traffic</div></div>
+      </div>
+      <p class="pl">Five ideas, then <b>up to +20% conversion to trial</b> and up to +15% ARPU, from the ads you already pay for.</p>
+      <button class="ov-start" data-view="pw">Open the paywall</button>
+      <p class="sum">Together, the five changes finish what your ads start. The paywall repeats the promise they tapped, starts the trial on their first course, shows your proof at the moment they decide, opens on Family for households that asked for it, and offers a cheaper plan to people who close it.</p>
     </div>
   </div>
+  <div class="endrow"><div class="qr"><img src="img/qr.svg" alt="QR code to the paywall"><div><b>Open it on your phone</b><span>Scan to try the paywall in your hand.</span></div></div></div>
 </div></div>
 <div class="foot"><div class="wrap">Impact ranges are Adapty’s expected effect from teardowns and A/B tests across subscription apps — not measured lift for flowkey. Prices are the US prices from flowkey’s help centre (Premium $24.99 / month or $149.99 / year with a 7-day trial; Family $37.49 / $224.99; Classic $99.99 / year); the per-month figures are those prices divided by twelve, rounded down as your own paywall does. 4.7 stars and 66K ratings from the US App Store; “15 Million downloads” and “In partnership with Yamaha” from your App Store screenshots; the 14-day money-back guarantee and the Classic plan from your help centre. Quotes from flowkey.com and US App Store reviews, as published. Ad groups and impressions from public ad intelligence, 27 July – 24 October 2026 (75% US, 97% Meta), not from your ad account. “Today” is rebuilt from your iOS paywall; the onboarding questions are yours. German and French screens are our translation.</div></div>
 </div><!-- /view-over -->
@@ -587,19 +656,19 @@ var IC={ lock:SV('<rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 1
 
 /* ---- the creatives, grouped by promise (from public ad intelligence, 27 Jul – 24 Oct 2026) ---- */
 var ADS=[
- {id:'wrong', hook:'One wrong note…', img:'ad-wrong.png', imp:'5.5M', n:'3 videos · since Apr 2023 · Meta, YouTube', promise:'The app hears your mistake and <b>waits for the right note</b>.', covers:[['ad-wrong.png','4.53M'],['ad-wrong2.png','472K'],['ad-wrong3.png','472K']], hero:'h-wrong.jpg',
+ {id:'wrong', hook:'One wrong note…', img:'ad-wrong.png', imp:'5.5M', n:'3 videos · since Apr 2023 · Meta, YouTube', promise:'The app hears your mistake and <b>waits for the right note</b>.', covers:[['ad-wrong.png','4.53M','since Apr 2023'],['ad-wrong2.png','472K','since Sep 2023'],['ad-wrong3.png','472K','since Oct 2024']], hero:'h-wrong.jpg',
   q:{t:'I’ve used this app for a few years, Wait Mode is simply incredible.',a:'llllliiiiidddd, on flowkey.com'}},
- {id:'cool', hook:'Wanna see something cool?', img:'ad-cool1.png', imp:'4.5M', n:'5 videos, EN and FR · since Jun 2022', promise:'Your phone on the piano, a song comes out: <b>the music you love, played by you</b>.', covers:[['ad-cool1.png','3.12M'],['ad-cool.png','346K'],['ad-coolfr.png','332K FR']], hero:'h-songs2.jpg',
+ {id:'cool', hook:'Wanna see something cool?', img:'ad-cool1.png', imp:'4.5M', n:'5 videos, EN and FR · since Jun 2022', promise:'Your phone on the piano, a song comes out: <b>the music you love, played by you</b>.', covers:[['ad-cool1.png','3.12M','since Jun 2022'],['ad-cool.png','346K','since Oct 2022'],['ad-coolfr.png','332K','French version']], hero:'h-songs2.jpg',
   q:{t:'flowkey has everything I wanted for learning piano. It helped me learn a whole song that nearly all my friends love.',a:'Snehaljshah, on flowkey.com'}},
- {id:'check', hook:'Check out this app!', img:'ad-check.png', imp:'3.9M', n:'3 videos · since Dec 2023', promise:'Stickers on the keys (G#, C#, E) are how beginners cope. <b>The app shows you every key instead</b>.', covers:[['ad-check.png','3.32M'],['ad-check2.png','312K'],['ad-check3.png','311K']], hero:'h-keys.jpg',
+ {id:'check', hook:'Check out this app!', img:'ad-check.png', imp:'3.9M', n:'3 videos · since Dec 2023', promise:'Stickers on the keys (G#, C#, E) are how beginners cope. <b>The app shows you every key instead</b>.', covers:[['ad-check.png','3.32M','since Dec 2023'],['ad-check2.png','312K','second cut'],['ad-check3.png','311K','since Dec 2023']], hero:'h-keys.jpg',
   q:{t:'Great app for beginners. I’ve never played any sort of instrument before, so everything is a bit new and scary. But this app is making me excited to learn.',a:'dinner_at_eight, on flowkey.com'}},
- {id:'easy', hook:'“Learning piano is not easy”', img:'ad-noteasy.png', imp:'2.4M+', n:'EN, IT, FR · new since Aug 2026', promise:'Speaks to people who expect to fail. <b>They need a first step, not a library</b>.', covers:[['ad-noteasy.png','1.76M'],['ad-easy2.png','680K'],['ad-easyit.png','IT'],['ad-easyfr.png','FR']], hero:'h-easy.jpg',
+ {id:'easy', hook:'“Learning piano is not easy”', img:'ad-noteasy.png', imp:'2.4M+', n:'EN, IT, FR · new since Aug 2026', promise:'Speaks to people who expect to fail. <b>They need a first step, not a library</b>.', covers:[['ad-noteasy.png','1.76M','since Aug 2026'],['ad-easy2.png','680K','since Aug 2026'],['ad-easyit.png','Italian','since Sep 2026'],['ad-easyfr.png','French','since Sep 2026']], hero:'h-easy.jpg',
   q:{t:'I’m a retired person who long fancied playing piano one day. flowkey is by far the most flexible app.',a:'Jeff, on flowkey.com'}},
- {id:'week', hook:'Day 1 → Day 7', img:'ad-day.png', imp:'612K', n:'2 videos · since Sep 2026 · Meta, YouTube', promise:'A week of progress, from day 1 to day 7: <b>exactly the length of your trial</b>.', covers:[['ad-day.png','309K'],['ad-day2.png','303K']], hero:'h-week.jpg',
+ {id:'week', hook:'Day 1 → Day 7', img:'ad-day.png', imp:'612K', n:'2 videos · since Sep 2026 · Meta, YouTube', promise:'A week of progress, from day 1 to day 7: <b>exactly the length of your trial</b>.', covers:[['ad-day.png','309K','since Sep 2026'],['ad-day2.png','303K','since Sep 2026']], hero:'h-week.jpg',
   q:{t:'Before using this app it took me months to learn a new song. With this app you will learn songs in a third of the time – or maybe even less.',a:'Emma, on flowkey.com'}},
- {id:'read', hook:'Someday I’ll learn to read music', img:'ad-someday.png', imp:'213K', n:'1 image · since Oct 2026', promise:'“Someday” crossed out: <b>reading music, starting now</b>.', covers:[['ad-someday.png','213K']], hero:'h-read.jpg',
+ {id:'read', hook:'Someday I’ll learn to read music', img:'ad-someday.png', imp:'213K', n:'1 image · since Oct 2026', promise:'“Someday” crossed out: <b>reading music, starting now</b>.', covers:[['ad-someday.png','213K','since Oct 2026 · image']], hero:'h-read.jpg',
   q:{t:'I think this app does a nice job introducing the elements of reading music.',a:'Hill B.W., App Store review'}},
- {id:'org', hook:'Organic, or any other ad', img:'ad-learning.png', imp:'2.7M', n:'“I’m learning piano with this app”, street piano, presenter, YouTube demo', promise:'No single promise: <b>your own line, “Play the music you love”</b>, with the goal they picked.', covers:[['ad-learning.png','652K'],['ad-street.png','707K'],['ad-couple.png','319K'],['ad-founder.png','235K']], hero:'h-default.jpg',
+ {id:'org', hook:'Organic, or any other ad', img:'ad-learning.png', imp:'2.7M', n:'“I’m learning piano with this app”, street piano, presenter, YouTube demo', promise:'No single promise: <b>your own line, “Play the music you love”</b>, with the goal they picked.', covers:[['ad-street.png','707K','street piano · Aug 2026'],['ad-learning.png','652K','“I’m learning piano…”'],['ad-couple.png','319K','billboard · Aug 2026'],['ad-founder.png','235K','presenter · Aug 2026']], hero:'h-default.jpg',
   q:{t:'This app is amazing. Pretty much all you need, especially if you’ve played other instruments before and just want to transition your music knowledge to piano.',a:'instaninja7374$, on flowkey.com'}}
 ];
 var AD={}; ADS.forEach(function(a){ AD[a.id]=a; });
@@ -741,13 +810,18 @@ $$('#chips .chip').forEach(function(ch){ ch.addEventListener('click',function(e)
   if(g==='of'){ setVar('new'); S.of=true; focusChg(5); } else { S.of=false; S.ad=g; if(S.v==='today'){ setVar('new'); } focusChg(1); }
   render(); if(g!=='of') flash('1'); }); });
 
-/* ---- the overview's ads list ---- */
-$('#adsList').innerHTML='<div class="ads-h"><b>Your ads, by promise</b><span>impressions, 27 Jul – 24 Oct 2026</span></div>'+ADS.map(function(a){
-  var c=CC[a.id].en; return '<div class="prom'+(a.id==='org'?' rest':'')+'"><div class="covers">'+a.covers.map(function(v){ return '<div class="cov"><img src="img/'+v[0]+'" alt=""><small><i></i>'+v[1]+'</small></div>'; }).join('')+'</div>'+
-  '<div class="pr-t"><q>'+a.hook.replace(/[“”]/g,'').replace(/<\/?s>/g,'')+'</q><p>'+a.promise+'</p><div class="pr-n">'+a.imp+' impressions · '+a.n+'</div></div>'+
-  '<button class="pr-go" data-ad="'+a.id+'"><small>Paywall opens on</small><b>'+(a.id==='cool'?'“Romantic songs and pop hits, on your piano.”':'“'+c.h+'”')+'</b><span>Open it '+SV('<path d="M5 12h14M13 6l6 6-6 6"/>',2.6).replace('<svg','<svg width="12" height="12"')+'</span></button></div>'; }).join('')+
-  '<div class="ads-note">Grouped from the creatives public ad intelligence shows for flowkey (75% of impressions in the US, 97% on Meta). The Spanish “Ahórrate un 65%” bus-stop videos are not in a row: they promise a price, see 02 below.</div>';
+/* ---- the overview's ads list, as their song library ---- */
+function dots(v){ var n=/M/.test(v)?3:/^[3-9]\d\dK/.test(v)?2:1; return '<span class="dt">'+['#34C759','#FFCC00','#FF3B30'].slice(0,n).map(function(c){ return '<i style="background:'+c+'"></i>'; }).join('')+'</span>'; }
+$('#adsList').innerHTML='<div class="lib-top"><h3>Ads</h3><span>Impressions, 27 Jul – 24 Oct 2026<br><span style="color:#34C759">●</span><span style="color:#FFCC00">●</span><span style="color:#FF3B30">●</span> 1M+ · <span style="color:#34C759">●</span><span style="color:#FFCC00">●</span> 300K+ · <span style="color:#34C759">●</span> less</span></div>'+ADS.map(function(a){
+  var c=CC[a.id].en, hh=a.id==='cool'?'Romantic songs and pop hits, on your piano.':c.h;
+  return '<div class="shelf"><div class="shelf-h"><b>'+a.hook.replace(/<\/?s>/g,'')+'<small>'+a.imp+' impressions · '+a.n+'</small></b><button class="pr-go" data-ad="'+a.id+'">Open paywall</button></div>'+
+  '<div class="row">'+a.covers.map(function(v){ return '<div class="cv"><img src="img/'+v[0]+'" alt="">'+dots(v[1])+'<b>'+v[1]+'</b><span>'+(v[2]||'')+'</span></div>'; }).join('')+
+  '<div class="pw-wrap"><button class="pw-card pr-go" data-ad="'+a.id+'"><small>Paywall opens on</small><b>“'+hh+'”</b><em>Tap to open it on the phone →</em></button><div class="pv">'+a.promise+'</div></div></div></div>'; }).join('')+
+  '<div class="lib-note">Grouped from the creatives public ad intelligence shows for flowkey (75% of impressions in the US, 97% on Meta), not from your ad account. The Spanish “Ahórrate un 65%” bus-stop videos have no row because they promise a price. See 2 below.</div>';
 $$('.pr-go').forEach(function(b){ b.addEventListener('click',function(){ showView('pw'); setVar('new'); S.of=false; S.ad=b.dataset.ad; $('#pwBody').scrollTop=0; render(); focusChg(1); setTimeout(function(){ flash('1'); },250); }); });
+/* the outcome sheet's Individual / Family-style switch */
+function ovPick(o){ $$('#ovSeg span').forEach(function(x){ x.classList.toggle('a',x.dataset.o===o); }); $$('.ocard').forEach(function(c){ c.classList.toggle('sel',c.dataset.o===o); }); }
+$$('#ovSeg span,.ocard').forEach(function(x){ x.addEventListener('click',function(){ ovPick(x.dataset.o); }); });
 
 /* ---- answers ---- */
 $$('#ans .opt').forEach(function(o){ var k=o.dataset.a, one=!!o.dataset.one;
@@ -850,7 +924,7 @@ window.addEventListener('load',placeMarks);
 if(document.fonts) document.fonts.ready.then(placeMarks);
 if(/[?&]open=(proto|pw)/.test(location.search)) showView('pw');
 /* GitHub Pages lets browsers keep this page for 10 minutes; if a newer build is live, reload onto it */
-var BUILD='b1';
+var BUILD='b2';
 fetch(location.pathname+'?cb='+Date.now(),{cache:'no-store'}).then(function(r){ return r.text(); }).then(function(h){
   var m=h.match(/var BUILD='([^']+)'/); if(m && m[1]!==BUILD){ var q=new URLSearchParams(location.search); q.set('v',m[1]); location.replace(location.pathname+'?'+q.toString()); }
 }).catch(function(){});
