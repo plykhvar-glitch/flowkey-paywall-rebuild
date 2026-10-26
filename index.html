@@ -209,10 +209,9 @@ img{display:block}
 .tpill b svg{width:20px;height:20px}
 .tpill i{width:11px;height:11px;border-radius:50%;flex:none;margin-left:2px}
 .tpill span{overflow:hidden;text-overflow:ellipsis}
-.tring{margin-top:16px;padding:9px;border:3px solid var(--or);border-radius:58px;box-shadow:0 0 0 7px rgba(239,125,0,.07),0 26px 50px -26px rgba(239,125,0,.55);cursor:pointer;transition:transform .2s}
-.tring:hover{transform:translateY(-3px)}
+.tring{margin-top:16px;padding:9px;border:3px solid var(--or);border-radius:58px;box-shadow:0 0 0 7px rgba(239,125,0,.07),0 26px 50px -26px rgba(239,125,0,.55)}
 .tbox{position:relative;width:calc(412px*var(--sc));height:calc(866px*var(--sc))}
-.mphone{position:absolute;left:0;top:0;width:412px;height:866px;background:#000;border:11px solid #111;border-radius:46px;transform:scale(var(--sc));transform-origin:0 0;pointer-events:none}
+.mphone{position:absolute;left:0;top:0;width:412px;height:866px;background:#000;border:11px solid #111;border-radius:46px;transform:scale(var(--sc));transform-origin:0 0}
 .mphone .phone-in.lightui .sbar{color:#000}
 .mphone .phone-in.lightui .homebar{background:#000;opacity:1}
 .mphone .fk-of{transform:none}
@@ -257,6 +256,32 @@ img{display:block}
 @media(max-width:1100px){.trio{--sc:.68}.tpill{font-size:15px;padding:10px 14px}}
 @media(max-width:900px){.trio{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;justify-content:flex-start;gap:16px;padding:0 4px 10px;scrollbar-width:none}.trio::-webkit-scrollbar{display:none}.tcol{flex:0 0 auto;scroll-snap-align:center}}
 @media(max-width:560px){.trio{--sc:.7}.steps button{height:44px;padding:0 16px;font-size:15.5px}.tpill{font-size:14px}}
+
+
+/* ============ paywall view: three ads, three live paywalls ============ */
+.pw3{padding:34px 0 70px}
+.pw3-top{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.pw3-top h1{font:700 40px/1.1 'Inter',sans-serif;letter-spacing:-1.2px}
+.pw3-sub{font-size:16px;line-height:1.55;color:var(--ink2);max-width:620px;margin-top:10px}
+.pw3 .steps{margin-top:30px}
+.pw3 .trio{margin-top:26px}
+.pw3 .demo-cap{width:640px;margin:14px auto 0}
+.mphone .fk-toast{bottom:150px;font-size:14px}
+.mphone .fk-back{z-index:2}
+.i5{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:44px}
+.i5c{text-align:left;background:#fff;border:1.5px solid var(--hair);border-radius:14px;padding:16px 16px 14px;display:flex;flex-direction:column;transition:border-color .15s,box-shadow .15s}
+.i5c:hover{border-color:var(--or)}
+.i5c.on{border-color:var(--or);box-shadow:0 10px 26px -14px rgba(239,125,0,.6)}
+.i5c small{font:700 10.5px/1 'Inter',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--or2)}
+.i5c b{font:700 15.5px/1.3 'Inter',sans-serif;margin-top:8px}
+.i5c p{font-size:13px;line-height:1.5;color:var(--ink2);margin-top:6px;flex:1}
+.i5c .lbl{font:600 9.5px/1.3 'Inter',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-top:12px}
+.i5c em{font:700 20px/1.1 'Inter',sans-serif;font-style:normal;color:var(--or2);margin-top:4px;letter-spacing:-.4px}
+.i5c em i{font:500 11px/1 'Inter',sans-serif;font-style:normal;color:var(--ink3);letter-spacing:0}
+.pw3 .endrow{margin-top:34px}
+.pw3-foot{font-size:12px;line-height:1.55;color:var(--ink3);text-align:center;max-width:760px;margin:26px auto 0}
+@media(max-width:1100px){.i5{grid-template-columns:repeat(2,1fr)}.i5c:last-child{grid-column:1/-1}}
+@media(max-width:700px){.pw3{padding:20px 0 50px}.pw3-top h1{font-size:30px}.pw3-sub{display:none}.pw3 .trio{margin-top:18px}.pw3 .steps{margin-top:18px}.pw3 .steps{gap:6px}.pw3 .steps button{height:40px;padding:0 13px;font-size:14px}.i5{grid-template-columns:1fr}.pw3 .demo-cap{width:auto;margin:12px 0 0}}
 
 /* ============ paywall view ============ */
 .stage{display:grid;grid-template-columns:minmax(470px,1fr) minmax(420px,540px);align-items:start;min-height:calc(100vh - 60px)}
@@ -537,15 +562,6 @@ img{display:block}
   </div>
 </div></div>
 
-<div class="trio-sec"><div class="wrap wide">
-  <div class="sec-k">Your three strongest ads</div>
-  <h2>Three ads, three promises. Here is what each one should open on.</h2>
-  <p class="body">Out of the ~420 ads in your Meta library we picked three: the one that has run longest, the one with the clearest beginner pain, and the one you are scaling fastest. Use the steps under the phones to follow each person from the ad to the paywall.</p>
-  <div class="trio" id="trio"></div>
-  <div class="steps" id="trioSteps"><button data-st="ad" class="on">The ad</button><button data-st="today">Today</button><button data-st="pw">Paywall</button><button data-st="of" class="dash">Offer on close</button></div>
-  <p class="trio-cap" id="trioCap"></p>
-</div></div>
-
 <div class="sec" style="padding-top:0"><div class="wrap">
   <div class="sec-k">Your ads</div>
   <h2>Six promises in your ads. One paywall behind all of them.</h2>
@@ -612,109 +628,23 @@ img{display:block}
 
 <!-- ======================= PAYWALL ======================= -->
 <div class="view" id="view-pw">
-<div class="stage">
-  <div class="phonecol" id="phonecol">
-    <div class="backbar"><button class="backbtn" data-view="over"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></span>Overview</button><span class="where">Trial paywall, after sign-up</span></div>
+<div class="pw3"><div class="wrap wide">
+  <div class="pw3-top">
+    <div><div class="sec-k">Paywall · one per ad</div><h1>Three ads. Three paywalls.</h1><p class="pw3-sub">The three strongest ads in your Meta library, each opening on the paywall that keeps its promise. Same sheet, same plans, same prices.</p></div>
     <div class="tools">
-      <div class="seg" id="segVar"><button data-v="today">Today</button><button data-v="new" class="on">Proposed</button></div>
       <div class="seg" id="segLang"><button data-l="en" class="on">EN</button><button data-l="de">DE</button><button data-l="fr">FR</button></div>
       <div class="seg" id="segTheme"><button data-th="dark" class="on">Dark</button><button data-th="light">Light</button></div>
       <div class="seg demo"><button id="demoBtn"><svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l12-7.5z"/></svg>30-sec walkthrough</button></div>
     </div>
-    <div class="demo-cap" id="demoCap"><span id="demoTxt"></span><div class="bar"><i id="demoBar"></i></div></div>
-
-    <div class="phone">
-      <div class="phone-in" id="phoneIn">
-        <div class="island"></div>
-        <div class="sbar"><span>9:41</span><span class="g">
-          <svg width="17" height="11" viewBox="0 0 17 11" fill="currentColor"><rect x="0" y="7.5" width="3" height="3.5" rx="1"/><rect x="4.5" y="5.5" width="3" height="5.5" rx="1"/><rect x="9" y="3" width="3" height="8" rx="1"/><rect x="13.5" y="0" width="3" height="11" rx="1"/></svg>
-          <svg width="16" height="11" viewBox="0 0 16 11" fill="currentColor"><path d="M8 10.5 5.6 7.9a3.4 3.4 0 0 1 4.8 0L8 10.5Zm0-5.6a6.4 6.4 0 0 0-4.5 1.9L1.7 4.9a9 9 0 0 1 12.6 0l-1.8 1.9A6.4 6.4 0 0 0 8 4.9Z"/></svg>
-          <svg width="25" height="12" viewBox="0 0 25 12" fill="none"><rect x=".6" y=".6" width="20" height="10.8" rx="3" stroke="currentColor" stroke-opacity=".5"/><rect x="2.2" y="2.2" width="16.5" height="7.6" rx="1.8" fill="currentColor"/><path d="M22.3 4.1v3.8a2 2 0 0 0 0-3.8Z" fill="currentColor" fill-opacity=".5"/></svg></span></div>
-        <div class="homebar"></div>
-
-        <section class="scr" id="pw">
-          <div class="fk-home"><div class="hh" id="hmH"></div><div class="ph"><img src="img/home.jpg" alt=""><i></i></div></div>
-          <div class="fk-dim"></div>
-          <div class="fk-sheet" id="sheet">
-            <div class="fk-top"><button class="fk-back" id="tdBack"></button><span class="fk-grab"></span><button class="fk-x" id="pwX" data-t="5" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
-            <div class="scr-body" id="pwBody"></div>
-            <div class="scr-foot" id="pwFoot"></div>
-          </div>
-        </section>
-        <div class="fk-odim" id="ofDim"></div>
-        <section class="fk-of" id="of"></section>
-        <div class="fk-toast" id="toast"></div>
-        <div id="mks"></div>
-      </div>
-    </div>
-
-    <div class="adpick">
-      <div class="k">The ad that brought the install</div>
-      <div class="chips" id="chips"></div>
-    </div>
-
-    <div class="ans" id="ans">
-      <div class="k">What flowkey already asks</div>
-      <p class="i">Your own onboarding questions. Change the answers and watch the timeline, the plan and the songs follow.</p>
-      <div class="lb">Have you played piano before?</div>
-      <div class="opt" data-a="played" data-one="1"><button data-v="no"><i></i>No, not yet</button><button data-v="yes"><i></i>Yes, I have</button></div>
-      <div class="lb">What are your piano goals?</div>
-      <div class="opt" data-a="goals"><button data-v="basics"><i></i>Learn the basics</button><button data-v="songs"><i></i>Play my favorite songs</button><button data-v="hands"><i></i>Play confidently with both hands</button><button data-v="chords"><i></i>Play chords</button><button data-v="read"><i></i>Read sheet music</button></div>
-      <div class="lb">What music would you like to play?</div>
-      <div class="opt" data-a="music"><button data-v="romantic"><i></i>Romantic</button><button data-v="classical"><i></i>Classical Music</button><button data-v="pop"><i></i>Pop Hits</button><button data-v="film"><i></i>Film &amp; TV</button><button data-v="game"><i></i>Game Music</button><button data-v="jazz"><i></i>Jazz</button></div>
-      <div class="lb">Do you have a piano?</div>
-      <div class="opt" data-a="piano" data-one="1"><button data-v="no"><i></i>No, not yet</button><button data-v="yes"><i></i>Yes, I do</button></div>
-      <div class="lb">Do others at home want to learn piano too?</div>
-      <div class="opt" data-a="home" data-one="1"><button data-v="me"><i></i>Just me</button><button data-v="others"><i></i>Others too</button></div>
-    </div>
-    <div class="qr side"><img src="img/qr.svg" alt="QR code to the paywall"><div><b>Open it on your phone</b><span>Scan to try the paywall in your hand.</span></div></div>
   </div>
-
-  <aside class="panelcol"><div class="pn">
-    <div class="pn-eb">Paywall rebuild · October 2026</div>
-    <h1>The trial paywall, keeping the promise of the ad they tapped</h1>
-    <p class="lede">Same sheet, same art direction, same plans at the same prices. Five changes, each fed by something flowkey already runs, asks or publishes. Flip <b>Today</b> above the phone to see the paywall as it ships.</p>
-    <div class="pn-from" id="pnFrom"></div>
-
-    <div class="chg" data-c="1"><span class="no">1</span><div>
-      <h3>The paywall opens on the ad they tapped</h3>
-      <dl class="ba"><dt>Today</dt><dd>Every install opens on “How Your Free Trial Works”, whichever ad they tapped.</dd>
-        <dt>Now</dt><dd id="c1now"></dd></dl>
-      <div class="uses"><b>Uses:</b> the Meta campaign and ad set that brought the install, passed to Adapty through your attribution. The ad’s own line stays as the white caption on top, the way it looks in the ad.</div>
-      <div class="imp"><span class="lbl">Potential outcome · based on Adapty data</span><b>CR +15–20%</b><span>to trial</span></div></div></div>
-
-    <div class="chg" data-c="2"><span class="no">2</span><div>
-      <h3>Plans and timeline on one sheet, with their first course</h3>
-      <dl class="ba"><dt>Today</dt><dd>Two screens: the timeline first, the plans behind a “View all plans” text link. Today on the timeline says “Unlock all songs and courses” for everyone.</dd>
-        <dt>Now</dt><dd id="c2now"></dd></dl>
-      <div class="uses"><b>Uses:</b> “Have you played piano before?” and “What are your piano goals?”, mapped to the courses on your home screen.</div>
-      <div class="imp"><span class="lbl">Potential outcome · based on Adapty data</span><b>CR +10–15%</b><span>to trial</span></div></div></div>
-
-    <div class="chg" data-c="4"><span class="no">3</span><div>
-      <h3>Your proof where they decide</h3>
-      <dl class="ba"><dt>Today</dt><dd>No rating, no download count, no Yamaha and no quote on either screen.</dd>
-        <dt>Now</dt><dd id="c4now"></dd></dl>
-      <div class="uses"><b>Uses:</b> your US App Store rating, the “15 Million downloads” and Yamaha tiles from your App Store screenshots, quotes from flowkey.com and your store reviews.</div>
-      <div class="imp"><span class="lbl">Potential outcome · based on Adapty data</span><b>CR +10–15%</b><span>to trial</span></div></div></div>
-
-    <div class="chg" data-c="3"><span class="no">4</span><div>
-      <h3>“Others too” opens on the Family Plan</h3>
-      <dl class="ba"><dt>Today</dt><dd>They tell you others at home want to learn, then get the individual trial. Family is two taps away, behind “View all plans” and a tab.</dd>
-        <dt>Now</dt><dd id="c3now"></dd></dl>
-      <div class="uses"><b>Uses:</b> “Do others at home want to learn piano too?”</div>
-      <div class="imp"><span class="lbl">Potential outcome · based on Adapty data</span><b>ARPU +5–10%</b><span>per subscriber</span></div></div></div>
-
-    <div class="chg" data-c="5"><span class="no">5</span><div>
-      <h3>flowkey Classic, when they close the sheet</h3>
-      <dl class="ba"><dt>Today</dt><dd>The X closes the sheet and leaves them on the free songs and lessons.</dd>
-        <dt>Now</dt><dd>One comparison sheet: <b>flowkey Classic at $99.99 a year</b> ($8.33 a month), every course and every classical song, no trial, upgrade to Premium any time. A link back to the free week stays underneath.</dd></dl>
-      <div class="uses"><b>Uses:</b> flowkey Classic, the plan your App Store page and help centre already list.</div>
-      <div class="imp"><span class="lbl">Potential outcome · based on Adapty data</span><b>ARPU +10–15%</b><span>from people who close</span></div></div></div>
-
-    <div class="pkept"><div class="k">Your design, unchanged</div><p>The navy sheet over the course home, the orange grabber, Today / Day 5 / Day 7, Individual / Family Plan, the white plan cards with the orange ribbon, and “Start 7-Day Free Trial” at $149.99 a year.</p></div>
-    <div class="pn-foot">Impact ranges are Adapty’s expected effect from teardowns and A/B tests across subscription apps — not measured lift for flowkey. US prices from flowkey’s help centre. Ad lines and impressions from public ad intelligence, 27 July – 24 October 2026.</div>
-  </div></aside>
-</div>
+  <div class="steps" id="trioSteps"><button data-st="ad">1 · The ad</button><button data-st="today">2 · Today</button><button data-st="pw" class="on">3 · Paywall</button><button data-st="fam">4 · Family</button><button data-st="of" class="dash">5 · Offer on close</button></div>
+  <p class="trio-cap" id="trioCap"></p>
+  <div class="demo-cap" id="demoCap"><span id="demoTxt"></span><div class="bar"><i id="demoBar"></i></div></div>
+  <div class="trio" id="trio"></div>
+  <div class="i5" id="ideas5"></div>
+  <div class="endrow"><div class="qr"><img src="img/qr.svg" alt="QR code to the paywall"><div><b>Open it on your phone</b><span>Scan to try the three paywalls in your hand.</span></div></div></div>
+  <p class="pw3-foot">Impact ranges are Adapty’s expected effect from teardowns and A/B tests across subscription apps — not measured lift for flowkey. US prices from flowkey’s help centre. Ad frames and copy from the Meta Ad Library (US), 26 October 2026; impressions from public ad intelligence, 27 July – 24 October 2026.</p>
+</div></div>
 </div><!-- /view-pw -->
 <div class="finger" id="finger"></div>
 
@@ -856,114 +786,121 @@ function offerHTML(){
     return '<div class="r'+(i===t.cmp.length-1?' pr':'')+(hl?' hi':'')+'"><span>'+r[0]+'</span>'+f(r[1],true)+f(r[2])+'</div>'; }).join('');
   return '<div class="fk-top" style="margin:0 -16px"><span class="fk-grab"></span></div><p class="k">'+t.ofK+'</p><h3>'+t.ofH+'</h3><p class="s">'+t.ofS+'</p><div class="fk-cmp">'+cmp+'</div><button class="fk-cta" id="ofCta">'+t.ofCta+'</button><p class="pl">'+t.ofPl+'</p><button class="tr2" id="ofTr">'+t.ofTr+'</button><button class="no" id="ofNo">'+t.ofNo+'</button>';
 }
-function render(){
-  var t=L(), pin=$('#phoneIn'), b=$('#pwBody'), ft=$('#pwFoot'), sh=$('#sheet'), a=AD[S.ad];
-  pin.classList.toggle('light',S.theme==='light');
-  $('#hmH').textContent=t.home;
-  var today=S.v==='today';
-  sh.classList.toggle('low',today);
-  $('#tdBack').innerHTML= today && S.step==='plans' ? IC.back+t.back : '';
-  var P=sheetParts(); b.innerHTML=P[0]; ft.style.display=P[1]===null?'none':''; if(P[1]!==null) ft.innerHTML=P[1];
-  /* offer */
-  $('#of').innerHTML=offerHTML();
-  pin.classList.toggle('ofon',S.of && !today);
-  /* chips + panel */
-  $$('#chips .chip').forEach(function(c){ c.classList.toggle('on', c.dataset.go==='of' ? (S.of&&!today) : (!S.of && c.dataset.go===S.ad)); });
-  $$('.opt').forEach(function(o){ var k=o.dataset.a, v=S[k]; $$('#ans .opt[data-a="'+k+'"] button').forEach(function(x){ x.classList.toggle('on', Array.isArray(v)? v.indexOf(x.dataset.v)>=0 : v===x.dataset.v); }); });
-  $('#pnFrom').innerHTML='<img src="img/'+a.img+'" alt=""><div><small>'+(S.ad==='org'?'No ad promise':'The ad they tapped')+'</small><b>'+a.hook.replace(/<\/?s>/g,'')+'</b><span>'+a.imp+' impressions · '+a.n+'</span></div>';
-  var E=T.en, ce=CC[S.ad].en;
-  $('#c1now').innerHTML=(S.ad==='org'?'Organic or unmatched installs keep your own line: ':'From “'+a.hook.replace(/<\/?s>/g,'')+'”: ')+'<b>'+(S.lang==='en'?head():(S.ad==='cool'?'(their genres), on your piano.':ce.h))+'</b>, over '+(a.hero==='h-default.jpg'?'your website’s piano photo':'the matching screen from your App Store page')+'.';
-  $('#c2now').innerHTML='One sheet: the plans, then the same Today / Day 5 / Day 7, with Today naming where they start: <b>“'+COURSE[course()].en+'”</b>.';
-  $('#c3now').innerHTML= S.home==='others' ? '“Others too” → <b>Family Plan selected</b>: $224.99 a year for up to five people, 7 days free.' : '“Just me” → the individual plan, as today. Pick “Others too” under the phone to see Family open first.';
-  $('#c4now').innerHTML='<b>4.7 stars from 66K ratings</b>, 15 Million downloads and Yamaha above the plans, and a quote picked for this ad: <b>'+a.q.a.split(',')[0]+'</b>.';
-  requestAnimationFrame(placeMarks);
-}
+/* ---- the three strongest ads, each with its own live paywall ---- */
+var TRIO=[
+ {id:'wrong',img:'fb-wrong.jpg',dot:'#F5B300',hook:'One wrong note…',tag:'Longest-running',why:'5.5M impressions, live since April 2023. It already names the feature: the app waits.',body:'Join millions of piano players learning with flowkey 🎹 🎶',head:'Play Piano Now',dur:'0:32',cap:['One wrong note…','and the app waits']},
+ {id:'check',img:'fb-check.jpg',dot:'#34C759',hook:'Check out this app!',tag:'Clearest pain',why:'3.9M impressions. Stickers on the keys are how beginners cope, and the ad tells them to stop.',body:'With flowkey, you can start learning your favorite songs within minutes – no matter your level',head:'Play your first tune in 10 minutes 🎹',dur:'0:43'},
+ {id:'easy',img:'fb-easy.jpg',dot:'#FF3B30',hook:'Learning piano is not easy',tag:'Fastest-growing',why:'2.4M+ impressions since August, now in English, Italian and French.',body:'With flowkey, you can start learning your favorite songs within minutes – no matter your level',head:'Learn Piano',dur:'0:25'}
+];
+var TCAP={
+ ad:'Step 1. What each person saw before installing: a real frame from each video, as it ran on Meta.',
+ today:'Step 2. Today all three land on the same “How Your Free Trial Works”, whatever their ad promised.',
+ pw:'Step 3. Proposed: each paywall picks up its own ad’s promise. Scroll a phone, pick a plan, tap the X.',
+ fam:'Step 4. They answered “Others too” in your quiz, so each paywall opens on the Family Plan.',
+ of:'Step 5. They close the paywall: flowkey Classic at $99.99 a year, every course and every classical song.'};
+var G={step:'pw',lang:'en',theme:'dark'};
+var COL=TRIO.map(function(){ return {}; });
+var SBAR='<div class="sbar"><span>9:41</span><span class="g"><svg width="17" height="11" viewBox="0 0 17 11" fill="currentColor"><rect x="0" y="7.5" width="3" height="3.5" rx="1"/><rect x="4.5" y="5.5" width="3" height="5.5" rx="1"/><rect x="9" y="3" width="3" height="8" rx="1"/><rect x="13.5" y="0" width="3" height="11" rx="1"/></svg><svg width="16" height="11" viewBox="0 0 16 11" fill="currentColor"><path d="M8 10.5 5.6 7.9a3.4 3.4 0 0 1 4.8 0L8 10.5Zm0-5.6a6.4 6.4 0 0 0-4.5 1.9L1.7 4.9a9 9 0 0 1 12.6 0l-1.8 1.9A6.4 6.4 0 0 0 8 4.9Z"/></svg><svg width="25" height="12" viewBox="0 0 25 12" fill="none"><rect x=".6" y=".6" width="20" height="10.8" rx="3" stroke="currentColor" stroke-opacity=".5"/><rect x="2.2" y="2.2" width="16.5" height="7.6" rx="1.8" fill="currentColor"/><path d="M22.3 4.1v3.8a2 2 0 0 0 0-3.8Z" fill="currentColor" fill-opacity=".5"/></svg></span></div>';
+var META='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Zm-1.6 13.6V7.9l6.2 4.1-6.2 4.1Z"/></svg>';
+var XSVG='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>';
 
-/* ---- chips: the creatives ---- */
-$('#chips').innerHTML=ADS.map(function(a){ return '<button class="chip" data-go="'+a.id+'"><img src="img/'+a.img+'" alt="">'+(a.id==='org'?'Organic / other':a.hook.replace(/<\/?s>/g,'').replace('Someday I’ll learn to read music','Someday… read music'))+'</button>'; }).join('')+'<button class="chip offer" data-go="of">✦ Offer on close</button>';
-$$('#chips .chip').forEach(function(ch){ ch.addEventListener('click',function(e){ if(e.isTrusted) stopDemo(); var g=ch.dataset.go; $('#pwBody').scrollTop=0;
-  if(g==='of'){ setVar('new'); S.of=true; focusChg(5); } else { S.of=false; S.ad=g; if(S.v==='today'){ setVar('new'); } focusChg(1); }
-  render(); if(g!=='of') flash('1'); }); });
+/* what one phone shows: the global step, plus whatever was tapped on that phone */
+function colStep(i){ var c=COL[i]; if(c.of) return 'of'; return G.step; }
+function phoneHTML(i){
+  var x=TRIO[i], c=COL[i], step=colStep(i), chrome='<div class="island"></div>'+SBAR+'<div class="homebar"></div>', toast='<div class="fk-toast"></div>';
+  if(step==='ad'){
+    return '<div class="phone-in lightui" style="background:#fff">'+chrome+'<div class="ig"><div class="ig-h"><img src="img/appicon.jpg" alt=""><div><b>flowkey</b><span>Sponsored</span></div><i>···</i></div>'+
+      '<div class="ig-m"><img src="img/'+x.img+'" alt=""><span class="ig-chip">Your ad · a frame from the video</span>'+(x.cap?'<div class="ig-cap">'+x.cap.map(function(t){ return '<span>'+t+'</span>'; }).join('')+'</div>':'')+'<span class="ig-ad">Ad</span><span class="ig-dur">'+x.dur+'</span></div>'+
+      '<div class="ig-cta"><span>'+x.head+'</span><b>Install now ›</b></div>'+
+      '<div class="ig-app"><img src="img/appicon.jpg" alt=""><div><b>flowkey – Learn to Play Piano</b><span><b>Sponsored</b> · App Store</span></div><button class="ig-inst">Install</button></div>'+
+      '<p class="ig-t"><b>flowkey</b> '+x.body+'</p><div class="ig-sk"><i style="width:62%"></i><i style="width:40%"></i><div class="ig-row"><span></span><div><i></i><i style="width:60%"></i></div></div><div class="ig-row"><span></span><div><i></i><i style="width:60%"></i></div></div></div></div>'+toast+'</div>';
+  }
+  var base=step==='of'?(G.step==='fam'?'fam':'pw'):step;
+  Object.assign(S,{ad:x.id,v:base==='today'?'today':'new',step:c.plans?'plans':'trial',lang:G.lang,theme:G.theme,home:base==='fam'?'others':'me',plan:c.plan||'y',tab:c.tab||'ind',tabTouched:!!c.tab,of:false,played:'no',piano:'yes',goals:['basics','songs'],music:['romantic','pop']});
+  var P=sheetParts(), today=base==='today', strip=function(h){ return h.replace(/ id="[^"]*"/g,''); };
+  return '<div class="phone-in'+(G.theme==='light'?' light':'')+'">'+chrome+'<section class="scr"><div class="fk-home"><div class="hh">'+L().home+'</div><div class="ph"><img src="img/home.jpg" alt=""><i></i></div></div><div class="fk-dim"></div>'+
+    '<div class="fk-sheet'+(today?' low':'')+'"><div class="fk-top">'+(today&&c.plans?'<button class="fk-back" data-act="back">'+IC.back+L().back+'</button>':'')+'<span class="fk-grab"></span><button class="fk-x" data-act="x" aria-label="Close">'+XSVG+'</button></div><div class="scr-body">'+strip(P[0])+'</div>'+(P[1]!==null?'<div class="scr-foot">'+strip(P[1])+'</div>':'')+'</div></section>'+
+    (step==='of'?'<div class="fk-odim" data-act="ofno"></div><section class="fk-of">'+strip(offerHTML())+'</section>':'')+toast+'</div>';
+}
+function drawCol(i,keepScroll){
+  var box=document.querySelector('#trio .tcol[data-i="'+i+'"] .mphone'), sb=box.querySelector('.scr-body'), y=keepScroll&&sb?sb.scrollTop:0;
+  box.innerHTML=phoneHTML(i);
+  var nb=box.querySelector('.scr-body'); if(nb) nb.scrollTop=y;
+}
+function renderTrio(){
+  $('#trio').innerHTML=TRIO.map(function(x,i){ return '<div class="tcol" data-i="'+i+'"><div class="tpill"><b>'+META+'Meta ad</b><span>· '+x.hook+'</span><i style="background:'+x.dot+'"></i></div>'+
+    '<div class="tring"><div class="tbox"><div class="mphone"></div></div></div>'+
+    '<div class="twhy"><b>'+x.tag+'</b><p>'+x.why+'</p></div></div>'; }).join('');
+  TRIO.forEach(function(x,i){ drawCol(i); });
+  paintSteps();
+}
+function paintSteps(){ $$('#trioSteps button').forEach(function(b){ b.classList.toggle('on',b.dataset.st===G.step); }); $('#trioCap').textContent=TCAP[G.step]; }
+function setStep(st){ G.step=st; COL=TRIO.map(function(){ return {}; }); paintSteps(); TRIO.forEach(function(x,i){ drawCol(i); }); }
+$$('#trioSteps button').forEach(function(b){ b.addEventListener('click',function(e){ if(e.isTrusted) stopDemo(); setStep(b.dataset.st); }); });
+$$('#segLang button').forEach(function(b){ b.addEventListener('click',function(e){ if(e.isTrusted) stopDemo(); G.lang=b.dataset.l; $$('#segLang button').forEach(function(x){ x.classList.toggle('on',x===b); }); TRIO.forEach(function(x,i){ drawCol(i,true); }); }); });
+$$('#segTheme button').forEach(function(b){ b.addEventListener('click',function(){ G.theme=b.dataset.th; $$('#segTheme button').forEach(function(x){ x.classList.toggle('on',x===b); }); TRIO.forEach(function(x,i){ drawCol(i,true); }); }); });
+function ptoast(i,m){ var e=document.querySelector('#trio .tcol[data-i="'+i+'"] .fk-toast'); if(!e) return; e.textContent=m; e.classList.add('show'); clearTimeout(e._t); e._t=setTimeout(function(){ e.classList.remove('show'); },1800); }
+/* taps inside a phone change only that phone */
+$('#trio').addEventListener('click',function(e){
+  var col=e.target.closest('.tcol'); if(!col) return; var i=+col.dataset.i, c=COL[i], t=T[G.lang], fam=G.step==='fam'||c.tab==='fam';
+  if(e.isTrusted) stopDemo();
+  var act=e.target.closest('[data-act]'), tab=e.target.closest('[data-tab]'), pl=e.target.closest('[data-plan]');
+  if(act){ var a=act.dataset.act;
+    if(a==='x'){ if(G.step==='today'){ ptoast(i,t.tX); } else { c.of=true; drawCol(i,true); } return; }
+    if(a==='back'){ c.plans=false; drawCol(i); return; }
+    if(a==='ofno'){ c.of=false; drawCol(i,true); return; } }
+  if(tab){ c.tab=tab.dataset.tab; drawCol(i,true); return; }
+  if(pl){ c.plan=pl.dataset.plan; drawCol(i,true); return; }
+  if(e.target.closest('.fk-link')){ c.plans=true; drawCol(i); return; }
+  if(e.target.closest('.fk-of .fk-cta')){ ptoast(i,t.tCl); return; }
+  if(e.target.closest('.fk-of .tr2')){ c.of=false; drawCol(i,true); ptoast(i,t.tBuy); return; }
+  if(e.target.closest('.fk-of .no')){ c.of=false; drawCol(i,true); ptoast(i,t.tX); return; }
+  if(e.target.closest('[data-cta]')){ ptoast(i,(c.plan==='m')?t.tBuyM:fam?t.tBuyF:t.tBuy); return; }
+  if(e.target.closest('.ig-inst,.ig-cta')){ setStep(G.step==='ad'?'pw':G.step); return; }
+});
+function fitPhones(){ var w=innerWidth, sc=w>=1180?0.8:w>=900?0.66:Math.min(0.8,(w-96)/412); $('#trio').style.setProperty('--sc',sc.toFixed(3)); }
+window.addEventListener('resize',fitPhones);
+
+/* ---- the five ideas, under the phones ---- */
+var IDEAS=[
+ {n:1,st:'pw',fx:'h',t:'The paywall opens on the ad they tapped',p:'Try one paywall per ad promise, because each of these three ads promises something different and today all three land on the same screen.',o:'CR +15–20%',u:'to trial'},
+ {n:2,st:'pw',fx:'tl',t:'Plans and timeline on one sheet',p:'Try the plans on the first sheet, with Today naming their first course, because today the plans hide behind “View all plans”.',o:'CR +10–15%',u:'to trial'},
+ {n:3,st:'pw',fx:'proof',t:'Your proof where they decide',p:'Try 4.7 stars from 66K ratings, 15 Million downloads and Yamaha above the plans, because none of it is on the paywall today.',o:'CR +10–15%',u:'to trial'},
+ {n:4,st:'fam',fx:'seg',t:'“Others too” opens on Family',p:'Try opening on the Family Plan for households, because your quiz asks and the paywall ignores the answer.',o:'ARPU +5–10%',u:'per subscriber'},
+ {n:5,st:'of',fx:'',t:'flowkey Classic on close',p:'Try Classic at $99.99 a year when they tap the X, because today the X leaves them on the free songs.',o:'ARPU +10–15%',u:'from people who close'}
+];
+$('#ideas5').innerHTML=IDEAS.map(function(d){ return '<button class="i5c" data-n="'+d.n+'"><small>Idea '+d.n+' of 5</small><b>'+d.t+'</b><p>'+d.p+'</p><span class="lbl">Potential outcome · based on Adapty data</span><em>'+d.o+' <i>'+d.u+'</i></em></button>'; }).join('');
+function showIdea(n){
+  var d=IDEAS[n-1]; setStep(d.st); $$('#ideas5 .i5c').forEach(function(b){ b.classList.toggle('on',+b.dataset.n===n); });
+  setTimeout(function(){ $$('#trio .tcol').forEach(function(col){ var b=col.querySelector('.scr-body'), el=null;
+    if(d.fx==='h') el=col.querySelector('.fk-h2'); if(d.fx==='proof') el=col.querySelector('.fk-proof'); if(d.fx==='seg') el=col.querySelector('.fk-seg'); if(d.fx==='tl') el=col.querySelector('.fk-tl');
+    if(el&&b){ if(d.fx==='tl'||d.fx==='seg'){ b.scrollTop=Math.max(0,el.offsetTop-(d.fx==='tl'?120:90)); } el.classList.remove('flash'); void el.offsetWidth; el.classList.add('flash'); } }); },60);
+}
+$$('#ideas5 .i5c').forEach(function(b){ b.addEventListener('click',function(e){ if(e.isTrusted) stopDemo(); showIdea(+b.dataset.n); }); });
 
 /* ---- the overview's ads list, as their song library ---- */
 function dots(v){ var n=/M/.test(v)?3:/^[3-9]\d\dK/.test(v)?2:1; return '<span class="dt">'+['#34C759','#FFCC00','#FF3B30'].slice(0,n).map(function(c){ return '<i style="background:'+c+'"></i>'; }).join('')+'</span>'; }
+var INTRIO={wrong:1,check:1,easy:1};
 $('#adsList').innerHTML='<div class="lib-top"><h3>Ads</h3><span>Impressions, 27 Jul – 24 Oct 2026<br><span style="color:#34C759">●</span><span style="color:#FFCC00">●</span><span style="color:#FF3B30">●</span> 1M+ · <span style="color:#34C759">●</span><span style="color:#FFCC00">●</span> 300K+ · <span style="color:#34C759">●</span> less</span></div>'+ADS.map(function(a){
-  var c=CC[a.id].en, hh=a.id==='cool'?'Romantic songs and pop hits, on your piano.':c.h;
-  return '<div class="shelf"><div class="shelf-h"><b>'+a.hook.replace(/<\/?s>/g,'')+'<small>'+a.imp+' impressions · '+a.n+'</small></b><button class="pr-go" data-ad="'+a.id+'">Open paywall</button></div>'+
+  var c=CC[a.id].en, hh=a.id==='cool'?'Romantic songs and pop hits, on your piano.':c.h, live=INTRIO[a.id];
+  return '<div class="shelf"><div class="shelf-h"><b>'+a.hook.replace(/<\/?s>/g,'')+'<small>'+a.imp+' impressions · '+a.n+'</small></b>'+(live?'<button class="pr-go">See it in Paywall</button>':'')+'</div>'+
   '<div class="row">'+a.covers.map(function(v){ return '<div class="cv"><img src="img/'+v[0]+'" alt="">'+dots(v[1])+'<b>'+v[1]+'</b><span>'+(v[2]||'')+'</span></div>'; }).join('')+
-  '<div class="pw-wrap"><button class="pw-card pr-go" data-ad="'+a.id+'"><small>Paywall opens on</small><b>“'+hh+'”</b><em>Tap to open it on the phone →</em></button><div class="pv">'+a.promise+'</div></div></div></div>'; }).join('')+
+  '<div class="pw-wrap"><'+(live?'button class="pw-card pr-go"':'div class="pw-card"')+'><small>Paywall opens on</small><b>“'+hh+'”</b><em>'+(live?'One of the three in Paywall →':'Same sheet, this headline')+'</em></'+(live?'button':'div')+'><div class="pv">'+a.promise+'</div></div></div></div>'; }).join('')+
   '<div class="lib-note">Grouped from the creatives public ad intelligence shows for flowkey (75% of impressions in the US, 97% on Meta), not from your ad account. The Spanish “Ahórrate un 65%” bus-stop videos have no row because they promise a price. See 2 below.</div>';
-$$('.pr-go').forEach(function(b){ b.addEventListener('click',function(){ showView('pw'); setVar('new'); S.of=false; S.ad=b.dataset.ad; $('#pwBody').scrollTop=0; render(); focusChg(1); setTimeout(function(){ flash('1'); },250); }); });
+$$('.pr-go').forEach(function(b){ b.addEventListener('click',function(){ showView('pw'); setStep('pw'); }); });
 /* the outcome sheet's Individual / Family-style switch */
 function ovPick(o){ $$('#ovSeg span').forEach(function(x){ x.classList.toggle('a',x.dataset.o===o); }); $$('.ocard').forEach(function(c){ c.classList.toggle('sel',c.dataset.o===o); }); }
 $$('#ovSeg span,.ocard').forEach(function(x){ x.addEventListener('click',function(){ ovPick(x.dataset.o); }); });
 
-/* ---- answers ---- */
-$$('#ans .opt').forEach(function(o){ var k=o.dataset.a, one=!!o.dataset.one;
-  o.querySelectorAll('button').forEach(function(b){ b.addEventListener('click',function(e){ if(e.isTrusted) stopDemo(); var v=b.dataset.v;
-    if(one) S[k]=v; else { var i=S[k].indexOf(v); if(i>=0) S[k].splice(i,1); else S[k].push(v); }
-    if(k==='home'){ S.tabTouched=false; }
-    S.of=false; if(S.v==='today') setVar('new'); render();
-    if(k==='home'){ focusChg(3); flash('3'); } else if(k==='music'){ if(S.ad==='cool') flash('1'); } else if(k!=='piano'){ focusChg(2); flash('2'); } }); }); });
-
-/* ---- phone interactions ---- */
-var tt; function toast(m){ var e=$('#toast'); e.textContent=m; e.classList.add('show'); clearTimeout(tt); tt=setTimeout(function(){ e.classList.remove('show'); },1800); }
-$('#pw').addEventListener('click',function(e){ var t=L();
-  if(e.target.closest('[data-cta]')){ toast(S.plan==='m'?t.tBuyM:fam()?t.tBuyF:t.tBuy); return; }
-  var tb=e.target.closest('[data-tab]'); if(tb){ S.tab=tb.dataset.tab; S.tabTouched=true; render(); return; }
-  var pc=e.target.closest('[data-plan]'); if(pc){ S.plan=pc.dataset.plan; render(); return; }
-  if(e.target.closest('#tdAll')){ S.step='plans'; render(); return; }
-  if(e.target.closest('#tdBack')){ S.step='trial'; render(); return; }
-});
-$('#pwX').addEventListener('click',function(){ if(S.v==='new'){ S.of=true; render(); focusChg(5); } else { toast(L().tX); } });
-$('#of').addEventListener('click',function(e){ var t=L();
-  if(e.target.closest('#ofCta')) toast(t.tCl);
-  else if(e.target.closest('#ofTr')){ S.of=false; render(); toast(t.tBuy); }
-  else if(e.target.closest('#ofNo')){ S.of=false; render(); toast(t.tX); } });
-$('#ofDim').addEventListener('click',function(){ S.of=false; render(); });
-
-function placeMarks(){
-  var pin=$('#phoneIn'), box=pin.getBoundingClientRect(), z=box.width/pin.offsetWidth||1, h='', body=$('#pwBody').getBoundingClientRect();
-  if(!pin.offsetParent||S.v!=='new'||S.of){ $('#mks').innerHTML=''; return; }
-  [1,2,3,4,5].forEach(function(n){
-    var el=document.querySelector('#pw [data-t="'+n+'"]'); if(!el||!el.offsetParent) return;
-    var r=el.getBoundingClientRect(), x=(r.left-box.left)/z-8, y=(r.top-box.top)/z-9;
-    if(n===5){ x=(r.left-box.left)/z-24; y=(r.top-box.top)/z+3; }
-    if(n===3){ x=(r.left-box.left)/z-30; y=(r.top-box.top)/z+4; }
-    if(n!==5 && (y<(body.top-box.top)/z-4 || y>(body.bottom-box.top)/z-16)) return;
-    var lab={1:1,2:2,4:3,3:4,5:5}[n];
-    h+='<span class="mk" data-mk="'+n+'" style="left:'+Math.min(box.width/z-26,Math.max(4,x))+'px;top:'+y+'px">'+lab+'</span>';
-  });
-  $('#mks').innerHTML=h;
-}
-$('#pwBody').addEventListener('scroll',placeMarks);
-window.addEventListener('resize',placeMarks);
-
-function setSeg(id,attr,val){ $$('#'+id+' button').forEach(function(x){ x.classList.toggle('on',x.dataset[attr]===val); }); }
-function setVar(v){ S.v=v; S.step='trial'; S.plan='y'; S.tabTouched=false; setSeg('segVar','v',v); }
-$$('#segVar button').forEach(function(b){ b.addEventListener('click',function(e){ if(e.isTrusted) stopDemo(); setVar(b.dataset.v); $('#pwBody').scrollTop=0; render(); }); });
-$$('#segLang button').forEach(function(b){ b.addEventListener('click',function(e){ if(e.isTrusted) stopDemo(); S.lang=b.dataset.l; setSeg('segLang','l',S.lang); render(); }); });
-$$('#segTheme button').forEach(function(b){ b.addEventListener('click',function(){ S.theme=b.dataset.th; setSeg('segTheme','th',S.theme); render(); }); });
-
-function flash(n){ var el=n==='q'?$('#pwQ'):document.querySelector('#pw [data-t="'+n+'"]'); if(el){ el.classList.remove('flash'); void el.offsetWidth; el.classList.add('flash'); } }
-function focusChg(n){ var c=document.querySelector('.chg[data-c="'+n+'"]'), pc=$('.panelcol'); if(c){ if(pc.scrollHeight>pc.clientHeight+4) pc.scrollTop=Math.max(0,pc.scrollTop+c.getBoundingClientRect().top-pc.getBoundingClientRect().top-120); c.style.background='#FFF1E0'; setTimeout(function(){ c.style.background=''; },3000); } }
-$$('.chg').forEach(function(c){
-  var n=c.dataset.c;
-  c.addEventListener('mouseenter',function(){ if(S.v!=='new') return; $$('#pw [data-t="'+n+'"]').forEach(function(e){ e.classList.add('hl'); }); var m=document.querySelector('[data-mk="'+n+'"]'); if(m) m.classList.add('hot'); });
-  c.addEventListener('mouseleave',function(){ $$('.hl').forEach(function(e){ e.classList.remove('hl'); }); $$('.mk.hot').forEach(function(e){ e.classList.remove('hot'); }); });
-});
-function scrollToEl(el,off){ var b=$('#pwBody'); if(!el) return; b.scrollTop=Math.max(0,el.getBoundingClientRect().top-b.getBoundingClientRect().top+b.scrollTop-(off||80)); placeMarks(); }
-
 /* ---- views ---- */
 function showView(v){ if(v!=='pw') stopDemo(); $$('.view').forEach(function(x){ x.classList.remove('on'); }); $('#view-'+v).classList.add('on');
-  $$('.nav-links button').forEach(function(b){ b.classList.toggle('on',b.dataset.view===v); }); window.scrollTo(0,0); requestAnimationFrame(placeMarks); }
+  $$('.nav-links button').forEach(function(b){ b.classList.toggle('on',b.dataset.view===v); }); window.scrollTo(0,0); }
 $$('[data-view]').forEach(function(b){ b.addEventListener('click',function(){ showView(b.dataset.view); }); });
-$$('.idea[data-hl]').forEach(function(b){ b.addEventListener('click',function(){
-  var n=b.dataset.hl; showView('pw'); setVar('new'); S.of=(n==='5'); if(n==='3'){ S.home='others'; } $('#pwBody').scrollTop=0; render();
-  setTimeout(function(){ if(n==='2') scrollToEl(document.querySelector('#pw [data-t="2"]'),120); if(n==='3') scrollToEl($('#pwSeg'),160); if(n!=='5') flash(n); focusChg(n); placeMarks(); },260); }); });
+var HL={'1':1,'2':2,'4':3,'3':4,'5':5};
+$$('.idea[data-hl]').forEach(function(b){ b.addEventListener('click',function(){ showView('pw'); showIdea(HL[b.dataset.hl]); }); });
 
 /* ---- the 30-second walkthrough ---- */
-var demo={on:false,tok:0,t0:0,dur:24000,raf:0};
+var demo={on:false,tok:0,t0:0,dur:22000,raf:0};
 function wait(ms,tok){ return new Promise(function(res,rej){ setTimeout(function(){ tok===demo.tok?res():rej('stop'); },ms); }); }
 function cap(txt){ $('#demoTxt').textContent=txt; }
 function fingerTo(el){ var r=el.getBoundingClientRect(), f=$('#finger'); f.style.left=(r.left+r.width/2+window.scrollX)+'px'; f.style.top=(r.top+r.height/2+window.scrollY)+'px'; f.classList.add('on'); }
@@ -971,72 +908,29 @@ async function tap(sel,tok){ var el=typeof sel==='string'?$(sel):sel; if(!el) re
 function bar(){ if(!demo.on) return; var p=Math.min(1,(performance.now()-demo.t0)/demo.dur); $('#demoBar').style.width=(p*100)+'%'; demo.raf=requestAnimationFrame(bar); }
 async function startDemo(){
   stopDemo(); var tok=++demo.tok; demo.on=true; demo.t0=performance.now();
-  showView('pw'); window.scrollTo(0,0); $('#phoneIn').classList.add('indemo'); persona(DEF); S.of=false; setVar('today'); $('#pwBody').scrollTop=0; render();
-  $('#demoCap').classList.add('on'); bar();
+  showView('pw'); setStep('ad'); $('#demoCap').classList.add('on'); bar();
+  var y=$('#trioSteps').getBoundingClientRect().top+scrollY-70; window.scrollTo({top:y,behavior:'smooth'});
   try{
-    cap('Today: whatever ad they tapped, everyone gets the same trial explainer.'); await wait(2200,tok);
-    cap('The plans are one more tap away.'); await tap('#tdAll',tok); await wait(1700,tok);
-    cap('Proposed: they tapped “One wrong note…”, so the sheet picks up that line.'); await tap('#segVar [data-v=new]',tok); flash('1'); await wait(2300,tok);
-    cap('From “Check out this app!”: no stickers, every key shown.'); await tap('#chips [data-go=check]',tok); await wait(2000,tok);
-    cap('From “Wanna see something cool?”: the music they picked in your quiz.'); await tap('#chips [data-go=cool]',tok); await wait(2100,tok);
-    cap('From “Learning piano is not easy”: one step at a time, and money back for 14 days.'); await tap('#chips [data-go=easy]',tok); await wait(2300,tok);
-    cap('4.7 stars, 15 Million downloads, Yamaha, and plans on the same sheet.'); flash('4'); await wait(1900,tok);
-    cap('The timeline names their first course.'); scrollToEl(document.querySelector('#pw [data-t="2"]'),150); flash('2'); await wait(1900,tok);
-    cap('“Others too” in the quiz: the Family Plan opens first.'); await tap('#ans [data-a=home] [data-v=others]',tok); scrollToEl($('#pwSeg'),170); await wait(2100,tok);
-    $('#pwBody').scrollTop=0; placeMarks();
-    cap('They close it: flowkey Classic, $99.99 a year, every course.'); await tap('#pwX',tok); await wait(2500,tok);
+    cap('Three of your ads, as they ran on Meta. Each one promises something different.'); await wait(2800,tok);
+    cap('Today: all three land on the same trial explainer.'); await tap('#trioSteps [data-st=today]',tok); await wait(2600,tok);
+    cap('Proposed: each paywall picks up its own ad’s promise.'); await tap('#trioSteps [data-st=pw]',tok); showIdea(1); await wait(3000,tok);
+    cap('Your 4.7 stars, 15 Million downloads and Yamaha, above the plans.'); showIdea(3); await wait(2400,tok);
+    cap('Today on the timeline names their first course.'); showIdea(2); await wait(2400,tok);
+    cap('They said “Others too” in your quiz: Family opens first.'); await tap('#trioSteps [data-st=fam]',tok); showIdea(4); await wait(2600,tok);
+    cap('They tap the X: flowkey Classic, $99.99 a year.'); await tap('#trioSteps [data-st=of]',tok); await wait(2800,tok);
   }catch(e){ return; }
   stopDemo();
 }
-function stopDemo(){ if(!demo.on) return; demo.on=false; demo.tok++; cancelAnimationFrame(demo.raf); $('#demoCap').classList.remove('on'); $('#finger').classList.remove('on'); $('#phoneIn').classList.remove('indemo'); requestAnimationFrame(placeMarks); }
+function stopDemo(){ if(!demo.on) return; demo.on=false; demo.tok++; cancelAnimationFrame(demo.raf); $('#demoCap').classList.remove('on'); $('#finger').classList.remove('on'); }
 $('#demoBtn').addEventListener('click',startDemo);
 $('#heroDemo').addEventListener('click',startDemo);
-$('#phoneIn').addEventListener('pointerdown',function(e){ if(e.isTrusted) stopDemo(); });
 $$('.nav-links button').forEach(function(b){ b.addEventListener('click',stopDemo); });
 
-/* ---- your three strongest ads, side by side: the ad → today → matched paywall → offer ---- */
-var TRIO=[
- {id:'wrong',img:'fb-wrong.jpg',dot:'#F5B300',hook:'One wrong note…',tag:'Longest-running',why:'5.5M impressions, live since April 2023. Your proven winner, and it already names the feature: the app waits.',body:'Join millions of piano players learning with flowkey 🎹 🎶',head:'Play Piano Now',dur:'0:32',cap:['One wrong note…','and the app waits']},
- {id:'check',img:'fb-check.jpg',dot:'#34C759',hook:'Check out this app!',tag:'Clearest pain',why:'3.9M impressions. Stickers on the keys are how every beginner copes, and the ad tells them to stop.',body:'With flowkey, you can start learning your favorite songs within minutes – no matter your level',head:'Play your first tune in 10 minutes 🎹',dur:'0:43'},
- {id:'easy',img:'fb-easy.jpg',dot:'#FF3B30',hook:'Learning piano is not easy',tag:'Fastest-growing',why:'2.4M+ impressions since August, now in English, Italian and French, with more “Learning piano isn’t easy” cuts in the library.',body:'With flowkey, you can start learning your favorite songs within minutes – no matter your level',head:'Learn Piano',dur:'0:25'}
-];
-var TCAP={ad:'What each person saw before installing: a real frame from each video, as it ran on Meta.',today:'Today: all three land on the same “How Your Free Trial Works”, whatever their ad promised.',pw:'Proposed: each paywall picks up its own ad’s promise, with your proof and the plans on one sheet. Tap a phone to try it.',of:'When they close it: flowkey Classic at $99.99 a year, every course and every classical song.'};
-var trioStep='ad', META='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Zm-1.6 13.6V7.9l6.2 4.1-6.2 4.1Z"/></svg>';
-function trioPhone(x,step){
-  var sb=$('#phoneIn .sbar').outerHTML, chrome='<div class="island"></div>'+sb+'<div class="homebar"></div>';
-  if(step==='ad'){
-    return '<div class="phone-in lightui" style="background:#fff">'+chrome+'<div class="ig"><div class="ig-h"><img src="img/appicon.jpg" alt=""><div><b>flowkey</b><span>Sponsored</span></div><i>···</i></div>'+
-      '<div class="ig-m"><img src="img/'+x.img+'" alt=""><span class="ig-chip">Your ad · a frame from the video</span>'+(x.cap?'<div class="ig-cap">'+x.cap.map(function(c){ return '<span>'+c+'</span>'; }).join('')+'</div>':'')+'<span class="ig-ad">Ad</span><span class="ig-dur">'+x.dur+'</span></div>'+
-      '<div class="ig-cta"><span>'+x.head+'</span><b>Install now ›</b></div>'+
-      '<div class="ig-app"><img src="img/appicon.jpg" alt=""><div><b>flowkey – Learn to Play Piano</b><span><b>Sponsored</b> · App Store</span></div><button>Install</button></div>'+
-      '<p class="ig-t"><b>flowkey</b> '+x.body+'</p><div class="ig-sk"><i style="width:62%"></i><i style="width:40%"></i><div class="ig-row"><span></span><div><i></i><i style="width:60%"></i></div></div><div class="ig-row"><span></span><div><i></i><i style="width:60%"></i></div></div></div></div></div>';
-  }
-  var keep=JSON.parse(JSON.stringify(S));
-  Object.assign(S,{ad:x.id,v:step==='today'?'today':'new',step:'trial',lang:'en',theme:'dark',home:'me',plan:'y',tabTouched:false,of:false,played:'no',piano:'yes',goals:['basics','songs'],music:['romantic','pop']});
-  var P=sheetParts(), today=step==='today', strip=function(h){ return h.replace(/ id="[^"]*"/g,''); };
-  var h='<div class="phone-in">'+chrome+'<section class="scr"><div class="fk-home"><div class="hh">Beginner Courses</div><div class="ph"><img src="img/home.jpg" alt=""><i></i></div></div><div class="fk-dim"></div>'+
-    '<div class="fk-sheet'+(today?' low':'')+'"><div class="fk-top"><span class="fk-grab"></span><span class="fk-x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></span></div><div class="scr-body">'+strip(P[0])+'</div>'+(P[1]!==null?'<div class="scr-foot">'+strip(P[1])+'</div>':'')+'</div></section>'+
-    (step==='of'?'<div class="fk-odim"></div><section class="fk-of">'+strip(offerHTML())+'</section>':'')+'</div>';
-  Object.keys(S).forEach(function(k){ delete S[k]; }); Object.assign(S,keep);
-  return h;
-}
-function renderTrio(){
-  $('#trio').innerHTML=TRIO.map(function(x){ return '<div class="tcol"><div class="tpill"><b>'+META+'Meta ad</b><span>· '+x.hook+'</span><i style="background:'+x.dot+'"></i></div>'+
-    '<div class="tring" data-ad="'+x.id+'" title="Open this paywall"><div class="tbox"><div class="mphone">'+trioPhone(x,trioStep)+'</div></div></div>'+
-    '<div class="twhy"><b>'+x.tag+'</b><p>'+x.why+'</p></div></div>'; }).join('');
-  $$('#trioSteps button').forEach(function(b){ b.classList.toggle('on',b.dataset.st===trioStep); });
-  $('#trioCap').textContent=TCAP[trioStep];
-  $$('#trio .tring').forEach(function(r){ r.addEventListener('click',function(){ showView('pw'); setVar(trioStep==='today'?'today':'new'); S.of=(trioStep==='of'); S.ad=r.dataset.ad; $('#pwBody').scrollTop=0; render(); focusChg(trioStep==='of'?5:1); }); });
-}
-$$('#trioSteps button').forEach(function(b){ b.addEventListener('click',function(){ trioStep=b.dataset.st; renderTrio(); }); });
-
-render();
+fitPhones();
 renderTrio();
-window.addEventListener('load',placeMarks);
-if(document.fonts) document.fonts.ready.then(placeMarks);
 if(/[?&]open=(proto|pw)/.test(location.search)) showView('pw');
 /* GitHub Pages lets browsers keep this page for 10 minutes; if a newer build is live, reload onto it */
-var BUILD='b3';
+var BUILD='b4';
 fetch(location.pathname+'?cb='+Date.now(),{cache:'no-store'}).then(function(r){ return r.text(); }).then(function(h){
   var m=h.match(/var BUILD='([^']+)'/); if(m && m[1]!==BUILD){ var q=new URLSearchParams(location.search); q.set('v',m[1]); location.replace(location.pathname+'?'+q.toString()); }
 }).catch(function(){});
