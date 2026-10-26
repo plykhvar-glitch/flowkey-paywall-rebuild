@@ -283,6 +283,17 @@ img{display:block}
 @media(max-width:1100px){.i5{grid-template-columns:repeat(2,1fr)}.i5c:last-child{grid-column:1/-1}}
 @media(max-width:700px){.pw3{padding:20px 0 50px}.pw3-top h1{font-size:30px}.pw3-sub{display:none}.pw3 .trio{margin-top:18px}.pw3 .steps{margin-top:18px}.pw3 .steps{gap:6px}.pw3 .steps button{height:40px;padding:0 13px;font-size:14px}.i5{grid-template-columns:1fr}.pw3 .demo-cap{width:auto;margin:12px 0 0}}
 
+
+/* book a demo */
+.demo-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:38px;padding:0 16px;margin-left:10px;border-radius:8px;background:#fff;color:#16181F;font:700 14px/1 'Inter',sans-serif;text-decoration:none;white-space:nowrap;transition:filter .15s}
+.demo-btn:hover{filter:brightness(.94)}
+.demo-btn svg{width:16px;height:16px;flex:none}
+.demo-btn.big{height:56px;padding:0 30px;margin:0;border-radius:8px;background:var(--or);color:#fff;font-size:17px;box-shadow:0 10px 26px rgba(239,125,0,.32)}
+.demo-btn.big svg{width:19px;height:19px}
+.demo-btn.ghost{display:flex;width:420px;max-width:100%;height:50px;margin:12px auto 0;background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.4);font-size:16px}
+.pw3 .endrow{gap:22px;align-items:center;flex-wrap:wrap}
+@media(max-width:560px){.nav .demo-btn{padding:0 10px;margin-left:6px;height:34px}.nav .demo-btn span{display:none}}
+
 /* ============ paywall view ============ */
 .stage{display:grid;grid-template-columns:minmax(470px,1fr) minmax(420px,540px);align-items:start;min-height:calc(100vh - 60px)}
 @media(max-width:1060px){.stage{grid-template-columns:minmax(0,1fr)}.panelcol{position:static!important;max-height:none!important;border-left:0!important;border-top:1px solid var(--hair)}}
@@ -502,7 +513,7 @@ img{display:block}
 <body>
 <div class="nav"><div class="nav-in">
   <img class="lg" src="img/logo.svg" alt="flowkey"><span class="nav-tag">Paywall audit</span>
-  <div class="nav-links"><button class="on" data-view="over">Overview</button><button data-view="pw">Paywall</button></div>
+  <div class="nav-links"><button class="on" data-view="over">Overview</button><button data-view="pw">Paywall</button></div><a class="demo-btn" href="https://calendly.com/mike-adapty/deep-dive" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg><span>Book a demo</span></a>
 </div></div>
 
 <!-- ======================= OVERVIEW ======================= -->
@@ -618,6 +629,7 @@ img{display:block}
       </div>
       <p class="pl">Five ideas, then <b>up to +20% conversion to trial</b> and up to +15% ARPU, from the ads you already pay for.</p>
       <button class="ov-start" data-view="pw">Open the paywall</button>
+      <a class="demo-btn ghost" href="https://calendly.com/mike-adapty/deep-dive" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>Book a demo</a>
       <p class="sum">Together, the five changes finish what your ads start. The paywall repeats the promise they tapped, starts the trial on their first course, shows your proof at the moment they decide, opens on Family for households that asked for it, and offers a cheaper plan to people who close it.</p>
     </div>
   </div>
@@ -642,7 +654,7 @@ img{display:block}
   <div class="demo-cap" id="demoCap"><span id="demoTxt"></span><div class="bar"><i id="demoBar"></i></div></div>
   <div class="trio" id="trio"></div>
   <div class="i5" id="ideas5"></div>
-  <div class="endrow"><div class="qr"><img src="img/qr.svg" alt="QR code to the paywall"><div><b>Open it on your phone</b><span>Scan to try the three paywalls in your hand.</span></div></div></div>
+  <div class="endrow"><a class="demo-btn big" href="https://calendly.com/mike-adapty/deep-dive" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>Book a demo</a><div class="qr"><img src="img/qr.svg" alt="QR code to the paywall"><div><b>Open it on your phone</b><span>Scan to try the three paywalls in your hand.</span></div></div></div>
   <p class="pw3-foot">Impact ranges are Adapty’s expected effect from teardowns and A/B tests across subscription apps — not measured lift for flowkey. US prices from flowkey’s help centre. Ad frames and copy from the Meta Ad Library (US), 26 October 2026; impressions from public ad intelligence, 27 July – 24 October 2026.</p>
 </div></div>
 </div><!-- /view-pw -->
@@ -930,7 +942,7 @@ fitPhones();
 renderTrio();
 if(/[?&]open=(proto|pw)/.test(location.search)) showView('pw');
 /* GitHub Pages lets browsers keep this page for 10 minutes; if a newer build is live, reload onto it */
-var BUILD='b5';
+var BUILD='b6';
 fetch(location.pathname+'?cb='+Date.now(),{cache:'no-store'}).then(function(r){ return r.text(); }).then(function(h){
   var m=h.match(/var BUILD='([^']+)'/); if(m && m[1]!==BUILD){ var q=new URLSearchParams(location.search); q.set('v',m[1]); location.replace(location.pathname+'?'+q.toString()); }
 }).catch(function(){});
