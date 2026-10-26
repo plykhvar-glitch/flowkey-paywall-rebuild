@@ -12,7 +12,7 @@ Five changes to flowkey’s trial paywall (“How Your Free Trial Works” → �
 | 4 | “Others too” in the quiz opens on the Family Plan | ARPU +5–10% |
 | 5 | flowkey Classic ($99.99 / year) as a comparison sheet when they close the paywall | ARPU +10–15% |
 
-The paywall view has a Today / Proposed switch, a picker for the ad that brought the install, EN / DE / FR, Dark / Light, a 30-second walkthrough, and the onboarding answers under the phone so you can change them and watch the paywall follow.
+The overview opens the three strongest ads side by side (“One wrong note…”, “Check out this app!”, “Learning piano is not easy”), as they ran on Meta, and steps each one through today’s paywall, the matched paywall and the offer on close. The paywall view has a Today / Proposed switch, a picker for the ad that brought the install, EN / DE / FR, Dark / Light, a 30-second walkthrough, and the onboarding answers under the phone so you can change them and watch the paywall follow.
 
 **Grounding.** US prices from flowkey’s help centre: Premium $24.99 / month or $149.99 / year with a 7-day trial, Family $37.49 / $224.99, Classic $99.99 / year; per-month figures are those prices divided by twelve. 4.7 stars and 66K ratings from the US App Store; “15 Million downloads” and the Yamaha partnership from flowkey’s App Store screenshots; the 14-day money-back guarantee from the help centre. Quotes from flowkey.com and US App Store reviews, as published. Creative groups and impressions from public ad intelligence, 27 July – 24 October 2026, not from flowkey’s ad account. German and French screens are our translation.
 

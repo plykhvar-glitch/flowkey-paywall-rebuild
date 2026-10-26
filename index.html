@@ -198,6 +198,66 @@ img{display:block}
 .qr span{display:block;font-size:13px;color:var(--ink3);line-height:1.45;max-width:170px;margin-top:3px}
 @media(max-width:1080px){.endrow .qr{display:none}}
 .foot{border-top:1px solid var(--hair);padding:30px 0 64px;font-size:12.5px;line-height:1.6;color:var(--ink3)}
+
+/* ============ your three strongest ads, side by side ============ */
+.trio-sec{padding:10px 0 84px}
+.wrap.wide{max-width:1180px}
+.trio{--sc:.8;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:34px;justify-items:center}
+.tcol{display:flex;flex-direction:column;align-items:center;min-width:0}
+.tpill{display:inline-flex;align-items:center;gap:8px;max-width:100%;background:#EAF1FF;border-radius:999px;padding:11px 18px;font:600 17px/1 'Inter',sans-serif;color:#3A6FD8;white-space:nowrap;box-shadow:0 6px 18px -10px rgba(8,102,255,.35)}
+.tpill b{font-weight:800;color:#0866FF;display:inline-flex;align-items:center;gap:7px}
+.tpill b svg{width:20px;height:20px}
+.tpill i{width:11px;height:11px;border-radius:50%;flex:none;margin-left:2px}
+.tpill span{overflow:hidden;text-overflow:ellipsis}
+.tring{margin-top:16px;padding:9px;border:3px solid var(--or);border-radius:58px;box-shadow:0 0 0 7px rgba(239,125,0,.07),0 26px 50px -26px rgba(239,125,0,.55);cursor:pointer;transition:transform .2s}
+.tring:hover{transform:translateY(-3px)}
+.tbox{position:relative;width:calc(412px*var(--sc));height:calc(866px*var(--sc))}
+.mphone{position:absolute;left:0;top:0;width:412px;height:866px;background:#000;border:11px solid #111;border-radius:46px;transform:scale(var(--sc));transform-origin:0 0;pointer-events:none}
+.mphone .phone-in.lightui .sbar{color:#000}
+.mphone .phone-in.lightui .homebar{background:#000;opacity:1}
+.mphone .fk-of{transform:none}
+.mphone .fk-odim{opacity:1}
+.twhy{max-width:calc(412px*var(--sc) + 24px);margin-top:16px;text-align:center}
+.twhy b{display:inline-block;font:700 11.5px/1 'Inter',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--or2)}
+.twhy p{font-size:14.5px;line-height:1.5;color:var(--ink2);margin-top:6px}
+.steps{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:34px}
+.steps button{height:52px;padding:0 26px;border-radius:999px;background:#fff;border:1.5px solid var(--hair2);font:500 19px/1 'Inter',sans-serif;color:var(--ink2);transition:all .15s}
+.steps button.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.steps button.dash{border:2px dashed var(--or);color:var(--or2)}
+.steps button.dash.on{background:var(--or);border-style:solid;color:#fff}
+.trio-cap{text-align:center;font-size:15px;color:var(--ink2);margin-top:16px;min-height:24px}
+/* the Meta feed the ad ran in */
+.ig{position:absolute;inset:0;background:#fff;color:#111;font-family:-apple-system,'Inter',sans-serif;padding-top:50px}
+.ig-h{display:flex;align-items:center;gap:10px;padding:9px 14px}
+.ig-h img{width:34px;height:34px;border-radius:50%}
+.ig-h b{display:block;font-size:14px;font-weight:600}
+.ig-h span{display:block;font-size:12px;color:#737373;margin-top:1px}
+.ig-h i{margin-left:auto;font-style:normal;font-weight:700;letter-spacing:1px;color:#262626}
+.ig-m{position:relative;width:100%;aspect-ratio:760/855;background:#000;overflow:hidden}
+.ig-m img{width:100%;height:100%;object-fit:cover}
+.ig-chip{position:absolute;left:50%;top:12px;transform:translateX(-50%);background:rgba(20,20,24,.62);color:#fff;font:500 12px/1 'Inter',sans-serif;padding:7px 11px;border-radius:999px;white-space:nowrap}
+.ig-cap{position:absolute;left:50%;top:52px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:4px}
+.ig-cap span{background:#fff;color:#111;font:700 15px/1 -apple-system,'Inter',sans-serif;padding:7px 10px;border-radius:7px;white-space:nowrap}
+.ig-ad{position:absolute;left:12px;bottom:12px;background:#FFD43B;color:#111;font:700 12px/1 'Inter',sans-serif;padding:5px 7px;border-radius:4px}
+.ig-dur{position:absolute;right:12px;bottom:12px;background:rgba(20,20,24,.7);color:#fff;font:600 12px/1 'Inter',sans-serif;padding:5px 7px;border-radius:4px}
+.ig-cta{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;background:#F0F4FA;border-bottom:1px solid #E6E9EE;font-size:14px}
+.ig-cta b{color:#0866FF;font-weight:600}
+.ig-app{display:flex;align-items:center;gap:11px;padding:12px 14px}
+.ig-app img{width:44px;height:44px;border-radius:11px}
+.ig-app div{flex:1;min-width:0}
+.ig-app div b{display:block;font-size:14.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ig-app div span{display:block;font-size:12.5px;color:#737373;margin-top:2px}
+.ig-app div span b{display:inline;color:#111;font-size:12.5px}
+.ig-app button{height:36px;padding:0 18px;border-radius:999px;background:#0866FF;color:#fff;font:600 15px/1 -apple-system,'Inter',sans-serif}
+.ig-t{padding:2px 14px 0;font-size:13.5px;line-height:1.4;color:#111}
+.ig-t b{font-weight:600}
+.ig-sk{padding:16px 14px 0}
+.ig-sk i{display:block;height:12px;border-radius:6px;background:#EEF0F3;margin-bottom:10px}
+.ig-row{display:flex;gap:14px;margin-top:14px}.ig-row span{width:150px;height:96px;border-radius:10px;background:#EEF0F3;flex:none}.ig-row div{flex:1;padding-top:4px}
+@media(max-width:1100px){.trio{--sc:.68}.tpill{font-size:15px;padding:10px 14px}}
+@media(max-width:900px){.trio{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;justify-content:flex-start;gap:16px;padding:0 4px 10px;scrollbar-width:none}.trio::-webkit-scrollbar{display:none}.tcol{flex:0 0 auto;scroll-snap-align:center}}
+@media(max-width:560px){.trio{--sc:.7}.steps button{height:44px;padding:0 16px;font-size:15.5px}.tpill{font-size:14px}}
+
 /* ============ paywall view ============ */
 .stage{display:grid;grid-template-columns:minmax(470px,1fr) minmax(420px,540px);align-items:start;min-height:calc(100vh - 60px)}
 @media(max-width:1060px){.stage{grid-template-columns:minmax(0,1fr)}.panelcol{position:static!important;max-height:none!important;border-left:0!important;border-top:1px solid var(--hair)}}
@@ -403,10 +463,10 @@ img{display:block}
 @media(max-width:500px){
   .phonecol{padding:12px 0 28px}
   .phone{width:100vw;height:calc(100svh - 56px);min-height:640px;border:0;border-radius:0;box-shadow:none;order:3;scroll-margin-top:56px}
-  .phone-in{border-radius:0}
-  .island,.sbar,.homebar{display:none}
-  .fk-sheet{top:14px}.fk-sheet.low{top:110px}
-  .fk-home .hh{top:20px}.fk-home .ph{top:48px}
+  .phone .phone-in{border-radius:0}
+  .phone .island,.phone .sbar,.phone .homebar{display:none}
+  .phone .fk-sheet{top:14px}.phone .fk-sheet.low{top:110px}
+  .phone .fk-home .hh{top:20px}.phone .fk-home .ph{top:48px}
   .backbar{order:1;padding:0 12px;width:100%}.backbar .where{display:none}
   .tools{order:2;padding:0 8px}.demo-cap{order:4;width:auto;align-self:stretch;margin:0 10px}
   .adpick{order:5;padding:0 10px}.ans{order:6;width:auto;margin:0 12px}
@@ -477,6 +537,15 @@ img{display:block}
   </div>
 </div></div>
 
+<div class="trio-sec"><div class="wrap wide">
+  <div class="sec-k">Your three strongest ads</div>
+  <h2>Three ads, three promises. Here is what each one should open on.</h2>
+  <p class="body">Out of the ~420 ads in your Meta library we picked three: the one that has run longest, the one with the clearest beginner pain, and the one you are scaling fastest. Use the steps under the phones to follow each person from the ad to the paywall.</p>
+  <div class="trio" id="trio"></div>
+  <div class="steps" id="trioSteps"><button data-st="ad" class="on">The ad</button><button data-st="today">Today</button><button data-st="pw">Paywall</button><button data-st="of" class="dash">Offer on close</button></div>
+  <p class="trio-cap" id="trioCap"></p>
+</div></div>
+
 <div class="sec" style="padding-top:0"><div class="wrap">
   <div class="sec-k">Your ads</div>
   <h2>Six promises in your ads. One paywall behind all of them.</h2>
@@ -538,7 +607,7 @@ img{display:block}
   </div>
   <div class="endrow"><div class="qr"><img src="img/qr.svg" alt="QR code to the paywall"><div><b>Open it on your phone</b><span>Scan to try the paywall in your hand.</span></div></div></div>
 </div></div>
-<div class="foot"><div class="wrap">Impact ranges are Adapty’s expected effect from teardowns and A/B tests across subscription apps — not measured lift for flowkey. Prices are the US prices from flowkey’s help centre (Premium $24.99 / month or $149.99 / year with a 7-day trial; Family $37.49 / $224.99; Classic $99.99 / year); the per-month figures are those prices divided by twelve, rounded down as your own paywall does. 4.7 stars and 66K ratings from the US App Store; “15 Million downloads” and “In partnership with Yamaha” from your App Store screenshots; the 14-day money-back guarantee and the Classic plan from your help centre. Quotes from flowkey.com and US App Store reviews, as published. Ad groups and impressions from public ad intelligence, 27 July – 24 October 2026 (75% US, 97% Meta), not from your ad account. “Today” is rebuilt from your iOS paywall; the onboarding questions are yours. German and French screens are our translation.</div></div>
+<div class="foot"><div class="wrap">Impact ranges are Adapty’s expected effect from teardowns and A/B tests across subscription apps — not measured lift for flowkey. Prices are the US prices from flowkey’s help centre (Premium $24.99 / month or $149.99 / year with a 7-day trial; Family $37.49 / $224.99; Classic $99.99 / year); the per-month figures are those prices divided by twelve, rounded down as your own paywall does. 4.7 stars and 66K ratings from the US App Store; “15 Million downloads” and “In partnership with Yamaha” from your App Store screenshots; the 14-day money-back guarantee and the Classic plan from your help centre. Quotes from flowkey.com and US App Store reviews, as published. Ad groups and impressions from public ad intelligence, 27 July – 24 October 2026 (75% US, 97% Meta), not from your ad account. The three ad frames, their captions and their ad copy are from the Meta Ad Library (US), 26 October 2026. “Today” is rebuilt from your iOS paywall; the onboarding questions are yours. German and French screens are our translation.</div></div>
 </div><!-- /view-over -->
 
 <!-- ======================= PAYWALL ======================= -->
@@ -758,22 +827,15 @@ function plans(pers){ var t=L(), f=fam();
    '<button class="fk-pc tr'+(S.plan==='y'?' sel':'')+'" data-plan="y"><div class="rb">'+t.rb+'</div><div class="bd"><b>12</b><span>'+t.mos+'</span><em>'+y+'</em></div><div class="ft">'+ym+' '+t.pm+'</div></button></div>'; }
 function priceLine(){ var t=L(), f=fam(); return S.plan==='m'?(f?t.pMF:t.pM):(f?t.pYF:t.pY); }
 
-function render(){
-  var t=L(), pin=$('#phoneIn'), b=$('#pwBody'), ft=$('#pwFoot'), sh=$('#sheet'), a=AD[S.ad];
-  pin.classList.toggle('light',S.theme==='light');
-  $('#hmH').textContent=t.home;
-  var today=S.v==='today';
-  sh.classList.toggle('low',today);
-  $('#tdBack').innerHTML= today && S.step==='plans' ? IC.back+t.back : '';
+function sheetParts(){
+  var t=L(), a=AD[S.ad], today=S.v==='today', body='', foot=null;
   if(today && S.step==='trial'){
-    b.innerHTML='<h2 class="fk-h1" style="margin-top:10px">'+t.trialH+'</h2>'+tl(false,false)+'<p class="fk-pl" style="margin:6px 22px 14px">'+t.pY+'</p><div style="padding:0 16px"><button class="fk-cta" data-cta>'+t.cta+'</button></div><button class="fk-link" id="tdAll">'+t.all+'</button>';
-    ft.style.display='none';
+    body='<h2 class="fk-h1" style="margin-top:10px">'+t.trialH+'</h2>'+tl(false,false)+'<p class="fk-pl" style="margin:6px 22px 14px">'+t.pY+'</p><div style="padding:0 16px"><button class="fk-cta" data-cta>'+t.cta+'</button></div><button class="fk-link" id="tdAll">'+t.all+'</button>';
   } else if(today){
-    b.innerHTML='<h2 class="fk-h1">'+t.unH+'</h2><p class="fk-sub">'+(fam()?t.unSF:t.unS)+'</p>'+plans(false)+'<p class="fk-pl" style="margin:26px 22px 14px">'+priceLine()+'</p><div style="padding:0 16px"><button class="fk-cta" data-cta>'+(S.plan==='m'?t.ctaM:t.cta)+'</button></div><p class="fk-terms" style="margin-top:40px">'+t.terms+'</p>';
-    ft.style.display='none';
+    body='<h2 class="fk-h1">'+t.unH+'</h2><p class="fk-sub">'+(fam()?t.unSF:t.unS)+'</p>'+plans(false)+'<p class="fk-pl" style="margin:26px 22px 14px">'+priceLine()+'</p><div style="padding:0 16px"><button class="fk-cta" data-cta>'+(S.plan==='m'?t.ctaM:t.cta)+'</button></div><p class="fk-terms" style="margin-top:40px">'+t.terms+'</p>';
   } else {
     var c=CC[S.ad][S.lang];
-    b.innerHTML='<div class="fk-media" data-t="1m"><img src="img/'+a.hero+'" alt=""></div>'+
+    body='<div class="fk-media" data-t="1m"><img src="img/'+a.hero+'" alt=""></div>'+
       '<span class="fk-k">'+c.k+'</span>'+
       '<h2 class="fk-h2" data-t="1">'+head()+'</h2><p class="fk-s2">'+c.s+'</p>'+
       '<div class="fk-proof" data-t="4"><div><b><i>★</i> 4.7</b><span>'+t.rat+'</span></div><div><b>'+t.dl+'</b><span>'+t.dlS+'</span></div><div><span style="margin-top:0">'+t.yam+'</span><img src="img/yamaha.svg" alt="Yamaha"></div></div>'+
@@ -782,15 +844,28 @@ function render(){
       tl(true,true)+
       '<div class="fk-q" id="pwQ"><div class="st">★★★★★</div><p>“'+a.q.t+'”</p><small>'+a.q.a+'</small></div>'+
       '<p class="fk-terms">'+t.terms+'</p>';
-    ft.style.display='';
-    ft.innerHTML='<p class="fk-pl">'+priceLine()+'</p><button class="fk-cta" data-cta id="pwCta">'+(S.plan==='m'?t.ctaM:t.cta)+'</button><div class="fk-mbg">'+(S.ad==='easy'?IC.shield+t.mbg:'')+'</div>';
+    foot='<p class="fk-pl">'+priceLine()+'</p><button class="fk-cta" data-cta id="pwCta">'+(S.plan==='m'?t.ctaM:t.cta)+'</button><div class="fk-mbg">'+(S.ad==='easy'?IC.shield+t.mbg:'')+'</div>';
   }
-  /* offer */
+  return [body,foot];
+}
+function offerHTML(){
+  var t=L();
   var cmp=t.cmp.map(function(r,i){ if(i===0) return '<div class="r"><span></span><span class="c">'+r[1]+'</span><span>'+r[2]+'</span></div>';
     var f=function(v,c){ return '<span class="'+(c?'c ':'')+(v===1?'on':v===0?'off':'')+'">'+(v===1?IC.chk.replace('<svg','<svg width="16" height="16"'):v===0?IC.no.replace('<svg','<svg width="14" height="14"'):v)+'</span>'; };
     var hl=(i===3 && S.music.some(function(m){ return ['pop','film','game','jazz'].indexOf(m)>=0; }));
     return '<div class="r'+(i===t.cmp.length-1?' pr':'')+(hl?' hi':'')+'"><span>'+r[0]+'</span>'+f(r[1],true)+f(r[2])+'</div>'; }).join('');
-  $('#of').innerHTML='<div class="fk-top" style="margin:0 -16px"><span class="fk-grab"></span></div><p class="k">'+t.ofK+'</p><h3>'+t.ofH+'</h3><p class="s">'+t.ofS+'</p><div class="fk-cmp">'+cmp+'</div><button class="fk-cta" id="ofCta">'+t.ofCta+'</button><p class="pl">'+t.ofPl+'</p><button class="tr2" id="ofTr">'+t.ofTr+'</button><button class="no" id="ofNo">'+t.ofNo+'</button>';
+  return '<div class="fk-top" style="margin:0 -16px"><span class="fk-grab"></span></div><p class="k">'+t.ofK+'</p><h3>'+t.ofH+'</h3><p class="s">'+t.ofS+'</p><div class="fk-cmp">'+cmp+'</div><button class="fk-cta" id="ofCta">'+t.ofCta+'</button><p class="pl">'+t.ofPl+'</p><button class="tr2" id="ofTr">'+t.ofTr+'</button><button class="no" id="ofNo">'+t.ofNo+'</button>';
+}
+function render(){
+  var t=L(), pin=$('#phoneIn'), b=$('#pwBody'), ft=$('#pwFoot'), sh=$('#sheet'), a=AD[S.ad];
+  pin.classList.toggle('light',S.theme==='light');
+  $('#hmH').textContent=t.home;
+  var today=S.v==='today';
+  sh.classList.toggle('low',today);
+  $('#tdBack').innerHTML= today && S.step==='plans' ? IC.back+t.back : '';
+  var P=sheetParts(); b.innerHTML=P[0]; ft.style.display=P[1]===null?'none':''; if(P[1]!==null) ft.innerHTML=P[1];
+  /* offer */
+  $('#of').innerHTML=offerHTML();
   pin.classList.toggle('ofon',S.of && !today);
   /* chips + panel */
   $$('#chips .chip').forEach(function(c){ c.classList.toggle('on', c.dataset.go==='of' ? (S.of&&!today) : (!S.of && c.dataset.go===S.ad)); });
@@ -919,12 +994,49 @@ $('#heroDemo').addEventListener('click',startDemo);
 $('#phoneIn').addEventListener('pointerdown',function(e){ if(e.isTrusted) stopDemo(); });
 $$('.nav-links button').forEach(function(b){ b.addEventListener('click',stopDemo); });
 
+/* ---- your three strongest ads, side by side: the ad → today → matched paywall → offer ---- */
+var TRIO=[
+ {id:'wrong',img:'fb-wrong.jpg',dot:'#F5B300',hook:'One wrong note…',tag:'Longest-running',why:'5.5M impressions, live since April 2023. Your proven winner, and it already names the feature: the app waits.',body:'Join millions of piano players learning with flowkey 🎹 🎶',head:'Play Piano Now',dur:'0:32',cap:['One wrong note…','and the app waits']},
+ {id:'check',img:'fb-check.jpg',dot:'#34C759',hook:'Check out this app!',tag:'Clearest pain',why:'3.9M impressions. Stickers on the keys are how every beginner copes, and the ad tells them to stop.',body:'With flowkey, you can start learning your favorite songs within minutes – no matter your level',head:'Play your first tune in 10 minutes 🎹',dur:'0:43'},
+ {id:'easy',img:'fb-easy.jpg',dot:'#FF3B30',hook:'Learning piano is not easy',tag:'Fastest-growing',why:'2.4M+ impressions since August, now in English, Italian and French, with more “Learning piano isn’t easy” cuts in the library.',body:'With flowkey, you can start learning your favorite songs within minutes – no matter your level',head:'Learn Piano',dur:'0:25'}
+];
+var TCAP={ad:'What each person saw before installing: a real frame from each video, as it ran on Meta.',today:'Today: all three land on the same “How Your Free Trial Works”, whatever their ad promised.',pw:'Proposed: each paywall picks up its own ad’s promise, with your proof and the plans on one sheet. Tap a phone to try it.',of:'When they close it: flowkey Classic at $99.99 a year, every course and every classical song.'};
+var trioStep='ad', META='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Zm-1.6 13.6V7.9l6.2 4.1-6.2 4.1Z"/></svg>';
+function trioPhone(x,step){
+  var sb=$('#phoneIn .sbar').outerHTML, chrome='<div class="island"></div>'+sb+'<div class="homebar"></div>';
+  if(step==='ad'){
+    return '<div class="phone-in lightui" style="background:#fff">'+chrome+'<div class="ig"><div class="ig-h"><img src="img/appicon.jpg" alt=""><div><b>flowkey</b><span>Sponsored</span></div><i>···</i></div>'+
+      '<div class="ig-m"><img src="img/'+x.img+'" alt=""><span class="ig-chip">Your ad · a frame from the video</span>'+(x.cap?'<div class="ig-cap">'+x.cap.map(function(c){ return '<span>'+c+'</span>'; }).join('')+'</div>':'')+'<span class="ig-ad">Ad</span><span class="ig-dur">'+x.dur+'</span></div>'+
+      '<div class="ig-cta"><span>'+x.head+'</span><b>Install now ›</b></div>'+
+      '<div class="ig-app"><img src="img/appicon.jpg" alt=""><div><b>flowkey – Learn to Play Piano</b><span><b>Sponsored</b> · App Store</span></div><button>Install</button></div>'+
+      '<p class="ig-t"><b>flowkey</b> '+x.body+'</p><div class="ig-sk"><i style="width:62%"></i><i style="width:40%"></i><div class="ig-row"><span></span><div><i></i><i style="width:60%"></i></div></div><div class="ig-row"><span></span><div><i></i><i style="width:60%"></i></div></div></div></div></div>';
+  }
+  var keep=JSON.parse(JSON.stringify(S));
+  Object.assign(S,{ad:x.id,v:step==='today'?'today':'new',step:'trial',lang:'en',theme:'dark',home:'me',plan:'y',tabTouched:false,of:false,played:'no',piano:'yes',goals:['basics','songs'],music:['romantic','pop']});
+  var P=sheetParts(), today=step==='today', strip=function(h){ return h.replace(/ id="[^"]*"/g,''); };
+  var h='<div class="phone-in">'+chrome+'<section class="scr"><div class="fk-home"><div class="hh">Beginner Courses</div><div class="ph"><img src="img/home.jpg" alt=""><i></i></div></div><div class="fk-dim"></div>'+
+    '<div class="fk-sheet'+(today?' low':'')+'"><div class="fk-top"><span class="fk-grab"></span><span class="fk-x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></span></div><div class="scr-body">'+strip(P[0])+'</div>'+(P[1]!==null?'<div class="scr-foot">'+strip(P[1])+'</div>':'')+'</div></section>'+
+    (step==='of'?'<div class="fk-odim"></div><section class="fk-of">'+strip(offerHTML())+'</section>':'')+'</div>';
+  Object.keys(S).forEach(function(k){ delete S[k]; }); Object.assign(S,keep);
+  return h;
+}
+function renderTrio(){
+  $('#trio').innerHTML=TRIO.map(function(x){ return '<div class="tcol"><div class="tpill"><b>'+META+'Meta ad</b><span>· '+x.hook+'</span><i style="background:'+x.dot+'"></i></div>'+
+    '<div class="tring" data-ad="'+x.id+'" title="Open this paywall"><div class="tbox"><div class="mphone">'+trioPhone(x,trioStep)+'</div></div></div>'+
+    '<div class="twhy"><b>'+x.tag+'</b><p>'+x.why+'</p></div></div>'; }).join('');
+  $$('#trioSteps button').forEach(function(b){ b.classList.toggle('on',b.dataset.st===trioStep); });
+  $('#trioCap').textContent=TCAP[trioStep];
+  $$('#trio .tring').forEach(function(r){ r.addEventListener('click',function(){ showView('pw'); setVar(trioStep==='today'?'today':'new'); S.of=(trioStep==='of'); S.ad=r.dataset.ad; $('#pwBody').scrollTop=0; render(); focusChg(trioStep==='of'?5:1); }); });
+}
+$$('#trioSteps button').forEach(function(b){ b.addEventListener('click',function(){ trioStep=b.dataset.st; renderTrio(); }); });
+
 render();
+renderTrio();
 window.addEventListener('load',placeMarks);
 if(document.fonts) document.fonts.ready.then(placeMarks);
 if(/[?&]open=(proto|pw)/.test(location.search)) showView('pw');
 /* GitHub Pages lets browsers keep this page for 10 minutes; if a newer build is live, reload onto it */
-var BUILD='b2';
+var BUILD='b3';
 fetch(location.pathname+'?cb='+Date.now(),{cache:'no-store'}).then(function(r){ return r.text(); }).then(function(h){
   var m=h.match(/var BUILD='([^']+)'/); if(m && m[1]!==BUILD){ var q=new URLSearchParams(location.search); q.set('v',m[1]); location.replace(location.pathname+'?'+q.toString()); }
 }).catch(function(){});
